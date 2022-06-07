@@ -6,6 +6,183 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+<<<<<<< HEAD
+        *{margin: 0 auto; border: none; text-decoration: none; font-family: "HY울릉도M"; text-align: center; }
+        button {background: none;}
+
+        #main {width: 100%; height: 680px;}
+        #main img {width: 100%; height: 100%;}
+        #main .m_button {width: 100%; height: 680px; display: flex; justify-content: space-between; align-items: center;
+             margin: 0; padding: 0; cursor: pointer;}
+        h3 {letter-spacing: 15px; padding: 120px; font-size: 35px; color: #163073; margin-top: 100px;}
+        
+
+        #news_box {margin: 0;}
+
+
+        #title_box1 {width: 830px; height: 108px; background-color: aliceblue; color: #163073;box-shadow: 2px 1px 2px rgb(201, 201, 201); margin: 0;}
+        .B_box {width: 150px; height: 108px; background-color: #163073; color: aliceblue; box-shadow: 0 2px 2px grey;
+            display: flex; align-items: center; margin: 0;}
+
+        #title_box {display: flex; justify-content: center; position: relative; top:-35px;}
+        #title_box1 p {font-size: 35px; padding: 30px; letter-spacing: 10px;}
+        #title_box1 span {font-family: "함초롬바탕 확장"; font-size: 15px; letter-spacing: 3px; cursor: pointer;}
+
+        .l_n_box {width: 980px; height: 400px;  background-color: aliceblue; display: none;}
+
+
+        .v_box {width: 300px; height: 300px; background-color: #163073;
+        background-image: radial-gradient(rgb(74, 5, 184),  rgb(10, 239, 255));}
+        .v_box img {width: 100px; height: 100px; padding: 40px;}
+        .v_box p {font-size: 30px; color: aliceblue;}
+        #visit {width: 1200px; display: flex; padding-bottom: 120px;}
+
+
+        #ex {width: 1200px; height: 900px; display: flex;padding-bottom: 100px; margin: 0 auto;}
+        #e1 {margin: 10px 20px; }
+        #e1 img {width: 660px; height: 405px;}
+
+        #e2 {width: 660px; height: 460px; display: flex; 
+            justify-content: space-between; 
+            align-items: flex-end;}
+        .e2_box {width: 295px; height: 380px; margin: 0;}    
+        #e2 img {width: 295px; height: 320px; margin: 0;}
+        .e2_box h5 {width: 295px; height: 60px; background-color: aliceblue; color: #163073;}
+
+        #e3 {width: 300px; height: 850px; display: flex; flex-direction: column; justify-content: flex-start; margin: 10px;}
+        #e3> p { text-align: left!important; margin: 10px 30px;}
+        .e3_box img {width: 99px; height: 99px;}
+        .e3_box a {width: 300px; height: 100px; display: flex;
+             flex-flow: nowrap; padding: 20px;}
+        .e3_box h6 {width: 200px; height: 90px;  font-family: "함초롬바탕 확장"; font-size: 20px; padding: 10px; text-align: left}
+
+
+
+
+    </style>
+
+</head>
+<body style="background-color: rgb(236, 236, 236);">
+
+    <div id="main">
+        <img src="img/m1c.jpg" alt="m1">
+
+        <script>
+            var ct = 0;
+            var imgs = new Array("img/m2c.jpg", "img/m3c.jpg", "img/m4c.jpg", "img/m1c.jpg",);
+            setTimeout(progress, 1000);
+            function progress() {
+                document.images[0].src = imgs[ct];
+                ct++;
+                setTimeout(progress, 1000);
+                if (ct > 3) {
+                    ct = 0
+                }
+            }
+        </script>
+
+    </div>
+
+    <div id="news_box">
+        <div id="title_box">
+            <div id="title_box1">
+                <p>NEWS <span>Osaka Aquarium Kaiyukan will reopen on June 1... more </span></p>
+            </div>
+            <div class="B_box">
+                <p>more</p><img src="img/icon.wb1.png" alt="">
+            </div>
+        </div>
+    
+        <div id="news">
+            <div class="l_n_box">text</div>
+            <div class="l_n_box">text</div>
+            <div class="l_n_box">text</div>
+            <div class="l_n_box">text</div>
+        </div>
+    </div>
+    
+    <h3><img src="img/icon_bwl.png" alt="icon"> Visit Us</h3>
+    <div id="visit">
+    
+        <a href="">
+            <div class="v_box"><img src="img/icon_time.png" alt="clock"><br>
+                <p>Opening Hours</p>
+            </div>
+        </a>
+    
+        <a href="">
+            <div class="v_box"><img src="img/icon_book_online.png" alt="onlineticket"><br>
+                <p>No waiting in line! Online tickets</p>
+            </div>
+        </a>
+    
+        <a href="">
+            <div class="v_box"><img src="img/icon_tic.png" alt=""><br>
+                <p>Ticket Information</p>
+            </div>
+        </a>
+    </div>
+    
+    <h3><img src="img/icon_bwl.png" alt="icon"> Explore</h3>
+    <div id="ex">
+    
+        <div id="e1">
+            <a href=""><img src="img/concept_img.png" alt="concept_img"></a>
+    
+    
+            <div id="e2">
+                <div class="e2_box">
+                    <a href=""><img src="img/pic-1.jpg" alt="">
+                        <h5>text</h5>
+                    </a>
+                </div>
+                <div class="e2_box">
+                    <a href=""><img src="img/pic-3.jpg" alt="">
+                        <h5>text</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div id="e3">
+            <p>title text</p><br><br>
+            <div class="e3_box">
+                <a href=""><img src="img/gallery-5.png" alt="">
+                    <h6>textrrr</h6>
+                </a>
+            </div>
+            <div class="e3_box">
+                <a href=""><img src="img/gallery-10.png" alt="">
+                    <h6>textrrr</h6>
+                </a>
+            </div>
+            <div class="e3_box">
+                <a href=""><img src="img/gallery-14.png" alt="">
+                    <h6>textrrr</h6>
+                </a>
+            </div>
+            <div class="e3_box">
+                <a href=""><img src="img/gallery-8.png" alt="">
+                    <h6>textrrr</h6>
+                </a>
+            </div>
+            <div class="e3_box">
+                <a href=""><img src="img/gallery-2.png" alt="">
+                    <h6>textrrr</h6>
+                </a>
+            </div>
+    
+            <p class="see"><a href=""><br><br>See More</a></p>
+        </div>
+    </div>
+
+<h3><img src="img/icon_bwl.png" alt="icon"> Research Activities</h3>
+    <div id="research">
+        <img src="img/Selvagen.jpg" alt="sal">
+        <img src="" alt="">
+        
+        <div id="scrolltext">text box</div>
+=======
         *{margin: 0 auto; border: none; text-decoration: none;}
         button {background: none;}
         #main {width: 100%; height: auto;}
@@ -92,11 +269,16 @@
         <div>
            text box
         </div>
+>>>>>>> 27febd674e672e85a4c18e1718e75fa89fd08920
         <p class="see"><a href="">See More</a></p>
     </div>
 
     <div id="around">
+<<<<<<< HEAD
+        <h3><img src="img/icon.wbl.png" alt="icon"> Around Facility</h3>
+=======
         <h3><img src="img/icon.wbl.png" alt="icon">Around Facility</h3>
+>>>>>>> 27febd674e672e85a4c18e1718e75fa89fd08920
         <h5>text</h5>
         <p class="see"><a href="">See More</a></p>
         <div id="slid">
@@ -115,4 +297,8 @@
 
 
 </body>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 27febd674e672e85a4c18e1718e75fa89fd08920
 </html>
