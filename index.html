@@ -44,6 +44,13 @@
         .v_box p {font-size: 30px; color: aliceblue;}
         #visit {width: 1200px; display: flex; padding-bottom: 120px;}
 
+        #explore button img {width: 35px; height: 60px;}
+        #slid_r img {width: 90px; height: 90px;}
+        #slid img {width: 180px; height: 300px;}
+        
+        #slid_r {width: 800px; display: flex; margin: 50px 10px;}
+        #slid {display: flex; padding: 30px;}
+
 
         #ex {width: 1200px; height: 900px; display: flex; margin: 0 auto!important;}
         /* #e1 {margin: 10px 20px;} */
@@ -67,17 +74,25 @@
         #research img {width: 100%; height: 100%;}
         .scrolltext {width: 500px; height: 500px; padding: 100px;}
 
-        #around {display: flex;}
-        #af1 {width: 1200px;}
+        #around_map
+        #around_map {width: 1000px; height: 600px; display :inline-block; position :absolute;}
+        #around_map > p {margin: 0; display :inline-block; position :absolute;}
+
+
+
+        #around {width: 1200px; height: 850px; display: flex; padding: 30px;}
+        #around {width: 1200px; height: 850px; display: flex; padding: 30px;}
+        #af1 {width: 700px;}
         #af2 {width: 660px; height: 405px; display: flex;  justify-content: space-between;}
         .af_box {margin: 0;}
         
-        .af_box img {width: 295px; height: 260px; margin-top: 40px;}
+        .af_box img {width: 295px; height: 260px; margin-top: 40px; }
         .textbox {width: 295px; height: 120px; background-color: aliceblue; margin-top: -36px;}
-        #af3 {}
+        #af3 {width: 400px; display: flex; flex-direction: column;}
         .af3_box a {width: 300px; height: 100px; display: flex; padding: 10px;}
         .af3_box img {width: 90px; height: 90px;}
-        .af3_box h6 {width: 200px; height: 90px; text-align: left; font-size: 17px; padding: 5px 15px; margin: 10px;}
+        .af3_box h6 {width: 200px; height: 90px; text-align: left; font-size: 17px; 
+            padding: 5px 15px; margin: 10px;}
 
 
 
@@ -146,46 +161,32 @@
     <h3><img src="img/icon_bwl.png" alt="icon"> Explore</h3>
 
     <div id="explore">
-<p>title text</p><br><br>
-        <div id="freind">
-                 <button onclick="pre"><img src="img/but_le.png" alt="b"></button>
-                <div class="">
-                    <a href=""><img src="img/gallery-5.png" alt="">
-                    </a>
-                </div>
-                <div class="">
-                    <a href=""><img src="img/gallery-10.png" alt="">
-                    </a>
-                </div>
-                <div class="e">
-                    <a href=""><img src="img/gallery-14.png" alt="">
-                    </a>
-                </div>
-                <div class="e3_box">
-                    <a href=""><img src="img/gallery-8.png" alt="">
-                    </a>
-                </div>
-                <div class="e3_box">
-                    <a href=""><img src="img/gallery-2.png" alt="">
-                    </a>
-                </div>
-            </div>
-    
+        <p>title text</p><br><br>
+        <div id="slid_r">
+            <button onclick="pre"><img src="img/but_le.png" alt="b" width="35px" height="60px"></button>
+            <a href=""><img src="img/gallery-5.png" alt="">
+            </a>
+            <a href=""><img src="img/gallery-10.png" alt="">
+            </a>
+            <a href=""><img src="img/gallery-14.png" alt="">
+            </a>
+            <a href=""><img src="img/gallery-8.png" alt="">
+            </a>
+            <a href=""><img src="img/gallery-2.png" alt="">
+            </a>
+        </div>
+
+        <p style="text-align: right">tesdgsfgdfhdfhfhdfgdfg</p>
+
         <div id="slid">
             <a href=""><img src="img/pic-1.jpg" alt=""></a>
-            <a href=""><img src="img/pic-2.jpg" alt=""></a>
             <a href=""><img src="img/pic-3.jpg" alt=""></a>
             <a href=""><img src="img/pic-4.jpg" alt=""></a>
-            <a href=""><img src="img/pic-5.jpg" alt=""></a>
             <a href=""><img src="img/pic-6.jpg" alt=""></a>
-            <a href=""><img src="" alt=""></a>
-            <a href=""><img src="" alt=""></a>
-            <a href=""><img src="" alt=""></a>
-            <button onclick="next"><img src="img/but_r.png" alt="b"></button>
+            <a href=""><img src="img/pic-5.jpg" alt=""></a>
+            <button onclick="next"><img src="img/but_r.png" alt="b" width="35px" height="60px"></button>
         </div>
-        
-    </div>
-    <p class="see"><a href="">See More</a></p>
+        <p class="see"><a href="">See More</a></p>
     
     
     
@@ -242,12 +243,19 @@
         </div>
     </div>
     <p class="see"><a href="">See More</a></p>
+
     
     <h3><img src="img/icon.wbl.png" alt="icon"> Around Facility</h3>
 
-    <div id="map">
+    <div id="around_map">
         <img src="img/bt_map.png" alt="map">
-        <p><a href=""></a></p>
+        <p style="left:30px; top:5600px"><a href=""><img src="img/bt_mapp4.png" alt="1"></a></p>
+        <p style="left:30px; top:6000px"><a href=""><img src="img/bt_mapp1.png" alt="1"></a></p>
+        <p style="left:500px; top:5600px"><a href=""><img src="img/bt_mapp2.png" alt="1"></a></p>
+        <p style="left:300px; top:5600px"><a href=""><img src="img/bt_mapp5.png" alt="1"></a></p>
+        <p style="left:80px; top:5600px"><a href=""><img src="img/bt_mapp3.png" alt="1"></a></p>
+        <p style="left:100px; top:5600px"><a href=""><img src="img/bt_mapp7.png" alt="1"></a></p>
+        <p style="left:60px; top:5800px"><a href=""><img src="img/bt_mapp6.png" alt="1"></a></p>
     </div>
 
     <div id="around">
@@ -304,8 +312,13 @@
                 </a>
             </div>
         </div>
-        <p class="see"><a href=""><br><br>See More</a></p>
     </div>
+    </div>
+        <p class="see"><a href=""><br><br>See More</a></p>
+
+    <div id="map"></div> 
+
+    
      
     
     </body>
