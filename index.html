@@ -7,11 +7,13 @@
     <title>Document</title>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
     <script>
-         $(document).ready(function () {
-      $("#title_box").click(function () {
-        $("#news").slideToggle("slow");
-      });
-    });
+        $(document).ready(function () {
+            $("#title_box").click(function () {
+               $("#news").slideToggle();
+               $(".B_box").toggle();
+               $(".close").toggle();
+            });
+        });
     </script>
     <style>
         *{margin: 0 auto; border: none; text-decoration: none; font-family: "HY울릉도M"; text-align: center;}
@@ -19,22 +21,50 @@
 
         #main {width: 100%; height: 680px;}
         #main img {width: 100%; height: 100%;}
-        #main .m_button {width: 100%; height: 680px; display: flex; justify-content: space-between; align-items: center;
+        #main .m_button {width: 100%; height: 680px; display: flex; 
+            justify-content: space-between; align-items: center;
              margin: 0; padding: 0; cursor: pointer;}
-        h3 {letter-spacing: 15px; padding: 120px; font-size: 35px; color: #163073; margin-top: 100px;}
-        .see {padding: 0 0 0 900px; padding-bottom: 100px;}
+        h3 {letter-spacing: 15px; padding: 120px; font-size: 35px; 
+            color: #163073; margin-top: 100px;}
+        .see {padding: 0 0 100px 900px;}
 
         #news_box {margin: 0;}
-    
-        #title_box1 {width: 830px; height: 108px; background-color: aliceblue; color: #163073;box-shadow: 2px 1px 2px rgb(201, 201, 201);margin: 0;}
-        .B_box {width: 150px; height: 108px; background-color: #163073; color: aliceblue; box-shadow: 0 2px 2px grey;
-            display: flex; align-items: center; margin: 0; cursor: pointer;}
-
-        #title_box {display: flex; justify-content: center; position: relative; top:-35px;}
+        #title_box {width: 980px; display: flex; display: flex; 
+            justify-content: center;  margin-top: -30px; 
+            box-shadow: 2px 1px 2px rgb(201, 201, 201);}
         #title_box1 p {font-size: 35px; padding: 30px; letter-spacing: 10px;}
-        #title_box1 span {font-family: "함초롬바탕 확장"; font-size: 15px; letter-spacing: 3px; cursor: pointer;}
-        #news {background-color: aliceblue; width: 900px; height: 400px; padding: 40px; margin-top: -50px; display: none;}
-        .l_n_box 
+        #title_box1 span {font-family: "함초롬바탕 확장"; font-size: 15px;
+        letter-spacing: 3px; cursor: pointer;}
+        #title_box1 {width: 830px; height: 108px; 
+            background-color: aliceblue; color: #163073; margin: 0;}
+
+        .B_box {width: 150px; height: 108px; background-color: #163073; color: aliceblue;
+            display: flex; align-items: center; justify-content: center; margin: 0; width: 150px; height: 108px; background-color: #163073; color: aliceblue; box-shadow: 0 2px 2px grey;
+            cursor: pointer; margin: 0;}
+        .B_box img {padding: 10px; margin: 0;}
+
+        .close {width: 150px; height: 108px; background-color: #163073; color: aliceblue;
+            display: flex; align-items: center; cursor: pointer; margin: 0; justify-content: space-around; flex-flow: row nowrap;}
+        .close> h1 {font-family: "함초롬바탕 확장"; padding: 15px; margin: 0;}
+
+        
+        #news {background-color: aliceblue; width: 900px; height: 880px; 
+            padding: 40px; 
+             display: flex; justify-content: center;}
+        .n_input {position: absolute; z-index: 0;  padding-top: 850px;}   
+
+        .l_n_box {width: 830px; height: 750px; position: absolute; z-index: 3;}
+        .l_n_box h4 {color: #163073; padding: -3px 20px ; font-size: 25px;}
+        .l_n_box * {text-align: left; font-family: "함초롬바탕 확장"; font-size: 17px;}
+        .l_n_box p a b {color: red; font-size: 30px;}
+        .n_a {display: flex;}
+        .n_a img {width: 280px; height: 280px; padding: 20px 0;}
+        .n_img {width: 300px; margin-top: 50px;}
+
+
+
+
+
 
         .v_box {width: 300px; height: 300px; background-color: #163073;
         background-image: radial-gradient(rgb(74, 5, 184),  rgb(10, 239, 255));}
@@ -123,21 +153,90 @@
     <div id="news_box">
         <div id="title_box">
             <div id="title_box1">
-                <p>NEWS <span>Osaka Aquarium Kaiyukan will reopen on June 1... more </span></p>
+                <p>NEWS <span>Osaka Aquarium Kaiyukan will reopen on June 1... more</span></p>
             </div>
             <div class="B_box">
                 <p>more</p><img src="img/icon.wb1.png" alt="icon">
             </div>
+            <div class="close" style="display: none;">
+                <p>close</p>
+                <h1>X</h1>
+            </div>
         </div>
     
-        <div id="news">
-            <div class="l_n_box">text</div>
-            <div class="l_n_box">text</div>
-            <div class="l_n_box">text</div>
-            <div class="l_n_box">text</div>
-            <div class="l_n_box">text</div>
+        <div id="news" style="display: none;">
+            <div class="n_input" id="radio">
+                <input type="radio" name="slide" id="slide1" checked>
+                <input type="radio" name="slide" id="slide2">
+                <input type="radio" name="slide" id="slide3">
+                <input type="radio" name="slide" id="slide4">
+            </div>
+            <div class="l_n_box" style="display: none;">
+                    <br>
+                    <h4>Osaka Aquarium Kaiyukan will reopen on June 1</h4><br>
+                    <p> We believe that serious measures are needed to prevent further spread of coronavirus
+                        infection.<br><br>
+                        We have implemented some practices to welcome our visitors.<br><br>
+                        Thank you for your understanding and cooperation.</p><br><br>
+                    <p>Our safety measures</p><br><br>
+                    <p>1.Online pre-booking is recommended to get your web-only ticket with a designated date and
+                        time.<br>
+                        - To maintain an appropriate distance in the aquarium<br>
+                        - To avoid waiting in a long line for getting tickets</p><br><br>
+                    <p>2.We will ventilate through the building as possible for your safety.</p><br><br>
+                    <p> 3.Before entering the aquarium, all visitors are required to check the body temperature with a
+                        thermography
+                        camera.<br>
+                        Visitors with a body temperature of exceeding 37.5 degrees Celsiu are not allowed to enter.</p>
+                    <br><br>
+                    <p>Notes for visitors</p>
+                    <p>
+                        - Please stay at home if you are not feeling well.<br>
+                        - Please wear a mask.<br>
+                        - Please keep an appropriate distance.<br>
+                        - Please do not speak loudly.<br>
+                        - Please do not touch the acrylic panels of exhibits or tanks.</p>
+                    <br><br>
+                    <p><a href=""><b>Click here to buy your tickets.</b></p></a><br><br><br>
+            </div>
+
+            <div class="l_n_box">
+                <div class="n_a">
+                    <div style="width: 500px;">
+                        <br><br>
+                        <h4>Osaka Aquarium KAIYUKAN voted the<br>
+                            Japan's and Asia's Best in TripAdvisor<br>
+                            Travelers' Choice Awards 2014</h4><br><br>
+                        <p> Osaka Aquarium KAIYUKAN was selected as Japan's and<br>
+                            Asia's best aquarium by TripAdvisor®, the largest travel site in<br>
+                            the world. In the TripAdvisor Travelers' Choice™ Awards 2014<br>
+                            for Zoos and Aquariums, which are given to top zoos and<br>
+                            aquariums worldwide based on reviews and opinions posted by<br>
+                            TripAdvisor travelers, the KAIYUKAN ranked first in both<br>
+                            Japan's and Asia's top aquarium categories. It is a great honor<br>
+                            for the aquarium to receive high recognition by visitors from<br>
+                            both Japan and abroad. Osaka Aquarium KAIYUKAN strives to<br>
+                            make continued efforts to convey beautiful natural<br>
+                            environments created by precious marine life to visitors.</p>
+                    </div>
+                    <div class="n_img">
+                    <img src="img/bg-4.jpg" alt="img">
+                    <img src="img/about_img.png" alt="img">
+                </div>
+                </div>
+            </div>
+            <div class="l_n_box" style="display: none;">
+                <br><br>
+                <h4>Osaka Free Wifi can be used around the Kaiyukan.</h4>
+                <img src="img/innews.jpg" alt="wi" width="600px" height="300px" id="in_img">
+            </div>
+            <div class="l_n_box"></div>
+            </div>
         </div>
+    
+        <div class="l_n_box"></div>
     </div>
+
     
     <h3><img src="img/icon_bwl.png" alt="icon"> Visit Us</h3>
     <div id="visit">
