@@ -14,11 +14,18 @@
                $(".close").toggle();
             });
         });
+
+        $(document).ready(function() {
+            var totalNum = $("#slid_r > img").length // 10
+            var currentNum = 1;
+            $("#pre").click
+         
+        });
     </script>
     <style>
         *{margin: 0 auto; border: none; text-decoration: none; font-family: "HY울릉도M"; text-align: center;}
-        button {background: none;}
-        a, button {cursor: pointer;}
+        button {background: none; cursor: pointer;}
+        a {cursor: pointer;}
 
         #main {width: 100%; height: 680px;}
         #main img {width: 100%; height: 100%;}
@@ -287,7 +294,7 @@
     <div id="explore">
         <p>title text</p><br><br>
         <div id="slid_r">
-            <button onclick="pre"><img src="img/but_le.png" alt="b" width="35px" height="60px"></button>
+            <button id="pre"><img src="img/but_le.png" alt="b" width="35px" height="60px"></button>
             <a href=""><img src="img/gallery-5.png" alt="">
             </a>
             <a href=""><img src="img/gallery-10.png" alt="">
@@ -297,6 +304,16 @@
             <a href=""><img src="img/gallery-8.png" alt="">
             </a>
             <a href=""><img src="img/gallery-2.png" alt="">
+            </a>
+            <a href=""><img src="img/gallery-1.png" alt="1" style="display: none;">
+            </a>
+            <a href=""><img src="img/gallery-4.png" alt="4" style="display: none;">
+            </a>
+            <a href=""><img src="img/gallery-5.png" alt="5" style="display: none;">
+            </a>
+            <a href=""><img src="img/gallery-7.png" alt="7" style="display: none;">
+            </a>
+            <a href=""><img src="img/gallery-11.png" alt="11" style="display: none;">
             </a>
         </div>
 
