@@ -65,7 +65,7 @@
     <style>
         *{margin: 0 auto; border: none; text-decoration: none; font-family: "HY울릉도M"; text-align: center;}
         button {background: none; cursor: pointer;}
-        a {cursor: pointer;}
+        a, img {cursor: pointer;}
 
         #main {width: 100%; height: 680px;}
         #main img {width: 100%; height: 100%;}
@@ -75,7 +75,7 @@
         h3 {letter-spacing: 15px; padding: 120px; font-size: 35px; 
             color: #163073; margin-top: 100px;}
         h3 > img {padding:0 22px;}    
-        .see {padding: 0 0 100px 900px;}
+        .see {padding: 100px 0 100px 1000px;}
 
         #news_box {margin: 0;}
         #title_box {width: 980px; display: flex; display: flex; 
@@ -95,8 +95,7 @@
         .B_box img, .B_box h1 {padding: 15px 20px 15px 0px; margin: 0;font-family: "함초롬바탕 확장"; }
         .B_box p{margin: 0; padding: 15px 0px 15px 20px;}
 
-
-        
+ 
         #news {background-color: aliceblue; width: 900px; height: 880px; 
             padding: 40px; 
              display: flex; justify-content: center;}
@@ -114,22 +113,25 @@
         
         .v_box {width: 300px; height: 300px; background-color: #163073;
         background-image: radial-gradient(rgb(74, 5, 184),  rgb(10, 239, 255));}
-        .v_box img {width: 100px; height: 100px; padding: 40px;}
-        .v_box p {font-size: 30px; color: aliceblue;}
+        .v_box img {width: 85px; height: 85px; padding: 50px;}
+        .v_box p {font-size: 22px; color: aliceblue; padding: 15px;}
         #visit {width: 1200px; display: flex; padding-bottom: 50px;}
 
-        #explore {position: relative; z-index: 2; margin-top: -1150px;}
+        #explore {position: relative; z-index: 2;}
         #explore button img {width: 35px; height: 60px;}
-        #bVideo {position: relative; z-index: 1;  min-width: 100%; min-height: 100%;}
+        #bVideo {position: absolute; z-index: 1;  min-width: 100%; min-height: 100%; display: block;}
        
-        #slid_r img {width: 90px; height: 90px;}
-        #slid img {width: 200px; height: 300px;}
+        #slid_r img {width: 90px; height: 90px; padding: 15px;}
+        #slid img {width: 200px; height: 300px; padding: 20px;}
         
-        #slid_r {width: 800px; display: flex; margin: 300px 20px 400px 0;}
-        #slid {width: 1200px; display: flex; padding: 30px; justify-content: space-around;}
+        #slid_r {width: 670px; display: flex; margin: 100px 20px 400px 0; overflow: hidden;}
+        #slid {width: 900px; display: flex; height: 310px; padding: 0px; justify-content: space-around; overflow: hidden; position: relative;}
+        #next {padding: 40px;}
+        #sr {width: 1000px; height: 310px; display: flex;}
+        
 
         #ex {width: 1200px; height: 900px; display: flex; margin: 0 auto!important;}
-        /* #e1 {margin: 10px 20px;} */
+       
         #e1 img {width: 660px; height: 405px;}
 
         #e2 {width: 660px; height: 460px; display: flex; 
@@ -171,23 +173,96 @@
 
 </head>
 <body style="background-color: rgb(242, 242, 242);">
+
+    <header>
+        <div id="header_top">
+            <h1><a href="">Osaka Aquarium Kaiyukan</a></h1>
+            
+            <div class="menu">
+                <a href="javascript:void(0)" class="a" onclick="openNav()">Menu</a>
+                <img src="img/icon.wb1.png" id="b" onclick="openNav()">
+            </div>
+        </div>
+    
+        <div id="menu_slid" class="overlay">
+            <div class="menu">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Close</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+            </div>
+            <div>
+                menu
+                <ul>
+                    <li></li>
+                    <li><a href="">list1</a></li>
+                    <li><a href="">list1</a></li>
+                    <li><a href="">list1</a></li>
+                    <li><a href="">list1</a></li>
+                </ul>
+            </div>
+    
+            <div>
+                menu
+                <ul>
+                    <li></li>
+                    <li><a href="">list1</a></li>
+                    <li><a href="">list1</a></li>
+                    <li><a href="">list1</a></li>
+                    <li><a href="">list1</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
     
     <div id="main">
-        <img src="img/m1c.jpg" alt="m1">
+        <img src="img/m1c.jpg" alt="m1" id="slider">
 
         <script>
             var ct = 0;
             var imgs = new Array("img/m2c.jpg", "img/m3c.jpg", "img/m4c.jpg", "img/m1c.jpg",);
-            setTimeout(progress, 1000);
+            setTimeout(progress, 2000);
             function progress() {
-                document.images[0].src = imgs[ct];
+                slider.src = imgs[ct];
                 ct++;
                 setTimeout(progress, 3000);
                 if (ct > 3) {
                     ct = 0
                 }
             }
-        </script>
+
+            
+            
+        $(function(){
+
+            var page = 0;
+
+            $('#prev').click(function () {
+
+                page--;
+
+                if (page < 0) {
+                    page = 0;
+                    return;
+                }
+
+                $('#slid_r').stop().animate({ marginLeft: -120 * page }, 800);
+
+            });
+
+            $('#next').click(function () {
+
+                page++;
+
+                if (page > $('.slid').length-3) {
+                    page = $('.slidi').length-3;
+                    return;
+                }
+
+                $('#slid').stop().animate({ marginLeft: -236 * page }, 800);
+            });
+
+        });
+    </script>
+
 
     </div>
 
@@ -323,43 +398,46 @@
     <div id="explore">
         <p>title text</p><br><br>
         <div id="slid_r">
-            <button id="pre"><img src="img/but_le.png" alt="b" width="35px" height="60px"></button>
-            <a href=""><img src="img/gallery-5.png" alt="">
+            <button id="prev"><img src="img/but_le.png" alt="b"></button>
+            <a href=""><img src="img/gallery-5.png" alt="5">
             </a>
-            <a href=""><img src="img/gallery-10.png" alt="">
+            <a href=""><img src="img/gallery-10.png" alt="10">
             </a>
-            <a href=""><img src="img/gallery-9.png" alt="">
+            <a href=""><img src="img/gallery-9.png" alt="9">
             </a>
-            <a href=""><img src="img/gallery-8.png" alt="">
+            <a href=""><img src="img/gallery-8.png" alt="8">
             </a>
-            <a href=""><img src="img/gallery-2.png" alt="">
+            <a href=""><img src="img/gallery-2.png" alt="2">
             </a>
-            <a href=""><img src="img/gallery-1.png" alt="1" style="display: none;">
+            <a href=""><img src="img/gallery-1.png" alt="1">
             </a>
-            <a href=""><img src="img/gallery-4.png" alt="4" style="display: none;">
+            <a href=""><img src="img/gallery-4.png" alt="4">
             </a>
-            <a href=""><img src="img/gallery-5.png" alt="5" style="display: none;">
+            <a href=""><img src="img/gallery-5.png" alt="5">
             </a>
-            <a href=""><img src="img/gallery-7.png" alt="7" style="display: none;">
+            <a href=""><img src="img/gallery-7.png" alt="7">
             </a>
-            <a href=""><img src="img/gallery-11.png" alt="11" style="display: none;">
+            <a href=""><img src="img/gallery-11.png" alt="11">
             </a>
         </div>
-
-    
-
-        <p style="text-align: right">tesdgsfgdfhdfhfhdfgdfg</p>
-
-        <div id="slid">
-            <a href=""><img src="img/pic-1.jpg" alt=""></a>
-            <a href=""><img src="img/pic-3.jpg" alt=""></a>
-            <a href=""><img src="img/pic-4.jpg" alt=""></a>
-            <a href=""><img src="img/pic-6.jpg" alt=""></a>
-            <a href=""><img src="img/pic-5.jpg" alt=""></a>
-            <button onclick="next"><img src="img/but_r.png" alt="b" width="35px" height="60px"></button>
+   
+        <div id="sr">
+            <div id="slid">
+                <a href=""><img src="img/pic-1.jpg" alt="1"></a>
+                <a href=""><img src="img/pic-3.jpg" alt="3"></a>
+                <a href=""><img src="img/pic-4.jpg" alt="4"></a>
+                <a href=""><img src="img/pic-6.jpg" alt="6"></a>
+                <a href=""><img src="img/pic-5.jpg" alt="5"></a>
+                <a href=""><img src="img/pic-1.jpg" alt="1"></a>
+                <a href=""><img src="img/pic-3.jpg" alt="3"></a>
+                <a href=""><img src="img/pic-4.jpg" alt="4"></a>
+            </div>
+            <button id="next"><img src="img/but_r.png" alt="b"></button>
         </div>
-        <p class="see"><a href="">See More</a></p>
     </div>
+
+        <p class="see"><a href="">See More</a></p>
+    
     
     <div id="ex">
     
@@ -404,6 +482,7 @@
             </div>
         </div>
     </div>
+    
     <p class="see"><a href=""><br><br>See More</a></p>
     
     <h3><img src="img/icon_bwl.png" alt="icon"> Research Activities</h3>
@@ -484,7 +563,54 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.672287923735!2d135.42842876916154!3d34.65628555863359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e8f35a4d8563%3A0x1133f4392908c3d9!2zMS1jaMWNbWUtMS0xLTEwIEthaWdhbmTFjXJpLCBNaW5hdG8gV2FyZCwgT3Nha2EsIDU1Mi0wMDIyIOydvOuzuA!5e0!3m2!1sko!2skr!4v1655363037319!5m2!1sko!2skr" width="1200" height="800" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div> 
 
-     
+    <footer>
+        <br>
+        <h2>textmain ttexttexttexttextte</h2>
+        <br>
+        <h5>textmain ttexttexttexttexttexttexttexttex ttexttexttexttexttexttexttexttextt</h5>
+        <button>Sign Up</button>
+        <div id="f_ar">
+            <div id="f_menu">
+                <ul>
+                    <li><a href="">ttexttex</a></li>
+                    <li><a href="">ttexttex</a></li>
+                    <li><a href="">ttexttex</a></li>
+                    <li><a href="">ttexttex</a></li>
+                    <li><a href="">ttexttex</a></li>
+                </ul>
+                <ul>
+                    <li><a href="">ttexttex</a></li>
+                    <li><a href="">ttexttex</a></li>
+                    <li><a href="">ttexttex</a></li>
+                    <li><a href="">ttexttex</a></li>
+                    <li><a href="">ttexttex</a></li>
+                </ul>
+                <ul>
+                    <li><a href="">ttexttex</a></li>
+                    <li><a href="">ttexttex</a></li>
+                    <li><a href="">ttexttex</a></li>
+                    <li><a href="">ttexttex</a></li>
+                    <li><a href="">ttexttex</a></li>
+                </ul>
+            </div>
+            <div id="sns">
+                Follow Us
+                <a href=""><img src="img/sns.png" alt=""></a>
+                <a href=""><img src="img/sns_02.png" alt=""></a>
+                <a href=""><img src="img/sns_facebook.png" alt=""></a>
+                <a href=""><img src="img/sns_kakao.png" alt=""></a>
+                <a href=""><img src="img/sns_line.png" alt=""></a>
+                <a href=""><img src="img/sns_twitter.png" alt=""></a>   
+        </div>
+        <div>
+        <br>    
+        <hr>
+        <br>    
+        <h6>sdkfhsdlkflskjfklasdl;akd;alskdv sdfklfjklsdfjslk kdsjfslkfjlsdkjflk jklfjslkdjflkdjfklsdjflsk
+            fjlkfjlskfjlaskjfl;sk jkhffkklds sdkfjlkjflskjflsakjlk dsjkfslkflkb <br>
+            dskjflkjdflskjfjslkjlksjfslkdfjlskdjflskjflskd</h6>
+
+    </footer>
     
     </body>
 </html>
