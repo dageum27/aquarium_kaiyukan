@@ -15,9 +15,6 @@
             });
         });
 
-
-
-
         $(document).ready(function() {
             var totalNum = $("#slid_r > img").length // 10
             var currentNum = 1;
@@ -25,9 +22,6 @@
          
         });
 
-
-
-        
         $(function() {
             $("#slide1").click(function() {
             $("#1").show();
@@ -76,7 +70,9 @@
         h3 {letter-spacing: 15px; padding: 120px; font-size: 35px; 
             color: #163073; margin-top: 100px;}
         h3 > img {padding:0 22px;}    
-        .see {padding: 100px 0 100px 1000px;}
+        .see {padding: 100px 0 100px 1000px; font-size: 20px; text-align: right; text-decoration: underline gold; }
+        .see a {color: #0F0FA4; padding: 5px 5px 0 5px;}
+        .see a:hover {background-color: #0F0FA4; color: aliceblue;}
 
         #news_box {margin: 0;}
         #title_box {width: 980px; display: flex; display: flex; 
@@ -96,7 +92,6 @@
         .B_box img, .B_box h1 {padding: 15px 20px 15px 0px; margin: 0;font-family: "함초롬바탕 확장"; }
         .B_box p{margin: 0; padding: 15px 0px 15px 20px;}
 
- 
         #news {background-color: aliceblue; width: 900px; height: 880px; 
             padding: 40px; 
              display: flex; justify-content: center;}
@@ -109,8 +104,6 @@
         .n_a {display: flex;}
         .n_a img {width: 280px; height: 280px; padding: 20px 0;}
         .n_img {width: 300px; margin-top: 50px;}
-
-
         
         .v_box {width: 300px; height: 300px; background-color: #163073;
         background-image: radial-gradient(rgb(74, 5, 184),  rgb(10, 239, 255));}
@@ -119,11 +112,11 @@
         #visit {width: 1200px; display: flex; padding-bottom: 50px;}
 
         #explore {position: relative; z-index: 2;}
-        #explore > p:nth-of-type(1) {text-align: left; padding: 20px 0 0 50px; color: aliceblue;}
+        #explore > p:nth-of-type(1) {text-align: left; padding: 10px 0 0 50px; color: aliceblue; font-size: 20px;}
         #explore > p:nth-of-type(2) {text-align: right; color: aliceblue; padding: 10px 50px 5px 0;}
         #explore > p:nth-of-type(3) {text-align: right; font-size: 25px; color: aliceblue; padding: 10px 50px 5px 0;}
-        #explore a img:hover {border: 5px aliceblue solid; opacity: 0.8; transform: scale(1.15);}
-
+        #slid_r a img:hover {border: 5px aliceblue solid; opacity: 0.8; transform: scale(1.15);}
+        #slid a img:hover {opacity: 0.8; transform: scale(1.15);}
 
         #explore button img {width: 35px; height: 60px;}
         #bVideo {position: absolute; z-index: 1;  min-width: 100%; min-height: 100%; display: block;}
@@ -133,12 +126,11 @@
         
         #slid_r {width: 680px; display: flex; margin: 10px 20px 400px 0; overflow: hidden;}
         #slid_r >a img:hover { border-radius: 50px;}
-        #slid {width: 980px; display: flex; height: 400px; padding: 0px; justify-content: space-around; overflow: hidden; position: relative;}
+        #slid {width: 980px; display: flex; justify-content: space-around; overflow: hidden; position: relative;}
         #next {padding: 40px;}
-        #sr {width: 1080px;  display: flex; float: right;}
+        #sr {width: 1080px;  display: flex; float: right; }
         
-
-        #ex {width: 1200px; height: 900px; display: flex; margin: 0 auto!important;}
+        #ex {width: 1200px; height: 900px; display: flex; margin: 0 auto!important; padding-top: 130px;}
        
         #e1 img {width: 660px; height: 405px;}
 
@@ -158,7 +150,7 @@
 
         #research {width: 1200px; height: 900px; display: flex;}
         #research img {width: 100%; height: 100%;}
-        .scrolltext {width: 500px; height: 500px; padding: 100px;}
+        .scrolltext {width: 500px; height: 500px; padding: 80px 10px 0 10px;font-family: "함초롬바탕 확장"; font-size: 15px;}
       
         #around_map {width: 1000px; height: 600px; }
         
@@ -175,12 +167,6 @@
         .af3_box img {width: 90px; height: 90px;}
         .af3_box h6 {width: 200px; height: 90px; text-align: left; font-size: 17px; 
             padding: 5px 15px; margin: 10px;}
-
-
-
-
-
-
 
         header, footer {font-family: 'HY울릉도B'; color: aliceblue; text-align: center;}
         #header_top {width: 100%; height: 70px; background-color: #0F0FA4; color: 
@@ -203,7 +189,7 @@
         #f_ar {display: flex; flex-wrap: wrap;}
 
         #f_menu {width: 600px; display: flex;}
-        #sns {width: 113px; height: 100px;}
+        #sns {width: 250px; height: 100px;}
 
 
 
@@ -268,7 +254,6 @@
                 }
             }
 
-            
             
         $(function(){
 
@@ -402,7 +387,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
         
@@ -429,14 +413,14 @@
         </a>
     </div>
 
-    <h3><img src="img/icon_bwl.png" alt="icon">Explore</h3> 
+    <h3><img src="img/icon_bwl.png" alt="icon">Explore</h3>
     <video autoplay muted loop id="bVideo">
             <source src="mp4/back_1.mp4" type="video/mp4">
         </video>
        
     <div id="explore">
         <br><br>
-        <p>  KAIYUKAN Aquarium<br>Explore Kaiyukan</p>
+        <p>Aquarium Explore Gallery <br>Lean more about the living creatures in Kaiyukan</p>
         <div id="slid_r">
             <button id="prev"><img src="img/but_le.png" alt="b"></button>
             <a href=""><img src="img/gallery-5.png" alt="5">
@@ -464,37 +448,40 @@
         <p>New Interactive Exhibit Area</p>
         <div id="sr">
             <div id="slid">
-                <a href=""><img src="img/pic-1.jpg" alt="1"></a>
+                <a href=""><img src="img/p16.jpg" alt="1"></a>
                 <a href=""><img src="img/p2.jpg" alt="1"></a>
                 <a href=""><img src="img/p3.jpg" alt="3"></a>
-                <a href=""><img src="img/pic-3.jpg" alt="3"></a>
+                <a href=""><img src="img/p13.jpg" alt="3"></a>
                 <a href=""><img src="img/p1.jpg" alt="4"></a>
                 <a href=""><img src="img/pic-6.jpg" alt="6"></a>
-                <a href=""><img src="img/pic-5.jpg" alt="5"></a>
-                
+                <a href=""><img src="img/p14.jpg" alt="5"></a>
                 <a href=""><img src="img/pic-4.jpg" alt="4"></a>
             </div>
             <button id="next"><img src="img/but_r.png" alt="b"></button>
         </div>
     </div>
-
-        <p class="see"><a href="">See More</a></p>
     
     
     <div id="ex">
-    
         <div id="e1">
             <a href=""><img src="img/concept_img.png" alt="concept_img"></a>
-    
+            <div class="hide">
+            <h5>Pacific Ocean<br>Whale shark / Rhincodon typus</h5><br>
+            <h6>The Pacific Ocean,<br> a massive body of water surrounded<br>
+                by five continents and covering one third of the earth’s surface.<br>
+                In this exhibit,<br> an aquarium 9 meters deep and 34 meters long<br>
+                at its longest represents the ocean<br> with a total of 5,400 tons of water.</h6>
+            
+        </div>
             <div id="e2">
                 <div class="e2_box">
                     <a href=""><img src="img/pic-1.jpg" alt="">
-                        <h5>text</h5>
+                        <h5><br>Japan Forest<br>Asian small clawed otter / Aonyx cinerea</h5>
                     </a>
                 </div>
                 <div class="e2_box">
                     <a href=""><img src="img/pic-3.jpg" alt="">
-                        <h5>text</h5>
+                        <h5><br>Monterey Bay<br>Largha seal / Phoca largha</h5>
                     </a>
                 </div>
             </div>
@@ -529,14 +516,20 @@
     
     <h3><img src="img/icon_bwl.png" alt="icon"> Research Activities</h3>
     <div id="research">
-        <img src="img/sav.png" alt="sal">
+        <img src="img/sav.png" alt="sav">
         <div class="scrolltext">
-            <p> text boxtext boxtext boxtext <br> boxtext box</p>
+            <p> Osaka Aquarium Biological Research Institute of Iburi Center (OBIC) 
+                </p><hr><br>
+                Iburi of Tosashimizu City,<br> Kochi Prefecture is home to many of the marine animals exhibited at the KAIYUKAN. <br>
+                In the coastal area bordering the Pacific Ocean,<br> whale sharks and other large migratory fishes as well as various other marine species come into <br>the region carried by the Japan Current (also known as the Kuroshio Current).<br><br>
+                In collaboration with local fishermen, OBIC collects marine animals to be exhibited at the KAIYUKAN and keeps them in a tank at OBIC or in a growing pool in Iburi Port in order to feed them and manage their health conditions. After thorough feeding training and health management, the marine animals are transported to the KAIYUKAN from OBIC to debut as exhibits of the aquarium.<br><br>
+                In a joint study with Kyoto University and Kochi University, and with the cooperation of local fishermen and other Iburi community members, OBIC has also worked on underwater biological research of marine animals and an investigation of fish species inhabiting nearby waters. The joint study results were published as a book titled “Fishes of the Kuroshio Current, Japan” on April 20, 2001.<br><br>
+                On December 12, 2009, OBIC established a second tank with a total volume of 3,300 tons of water (19 m long × 31 m wide × 5 m deep + 8 m long × 8 m wide × 5 m deep). In the second tank, OBIC staff members keep whale sharks and other large fish and carry out various health-management training programs, with the aim of conducting biological research and breeding studies on these mysterious marine creatures.<br><br>
         </div>
     </div>
     <p class="see"><a href="">See More</a></p>
 
-    
+    <hr>
     <h3><img src="img/icon.wbl.png" alt="icon"> Around Facility</h3>
 
     <div id="around_map">
@@ -636,7 +629,7 @@
                 </ul>
             </div>
             <div id="sns">
-                Follow Us
+                Follow Us <br><br>
                 <a href=""><img src="img/sns.png" alt=""></a>
                 <a href=""><img src="img/sns_02.png" alt=""></a>
                 <a href=""><img src="img/sns_facebook.png" alt=""></a>
