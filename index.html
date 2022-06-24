@@ -119,16 +119,23 @@
         #visit {width: 1200px; display: flex; padding-bottom: 50px;}
 
         #explore {position: relative; z-index: 2;}
+        #explore > p:nth-of-type(1) {text-align: left; padding: 20px 0 0 50px; color: aliceblue;}
+        #explore > p:nth-of-type(2) {text-align: right; color: aliceblue; padding: 10px 50px 5px 0;}
+        #explore > p:nth-of-type(3) {text-align: right; font-size: 25px; color: aliceblue; padding: 10px 50px 5px 0;}
+        #explore a img:hover {border: 5px aliceblue solid; opacity: 0.8; transform: scale(1.15);}
+
+
         #explore button img {width: 35px; height: 60px;}
         #bVideo {position: absolute; z-index: 1;  min-width: 100%; min-height: 100%; display: block;}
        
-        #slid_r img {width: 90px; height: 90px; padding: 15px;}
-        #slid img {width: 200px; height: 300px; padding: 20px;}
+        #slid_r img {width: 90px; height: 90px; margin: 15px;}
+        #slid img {width: 200px; height: 300px; margin: 20px;}
         
-        #slid_r {width: 670px; display: flex; margin: 100px 20px 400px 0; overflow: hidden;}
-        #slid {width: 900px; display: flex; height: 310px; padding: 0px; justify-content: space-around; overflow: hidden; position: relative;}
+        #slid_r {width: 680px; display: flex; margin: 10px 20px 400px 0; overflow: hidden;}
+        #slid_r >a img:hover { border-radius: 50px;}
+        #slid {width: 980px; display: flex; height: 400px; padding: 0px; justify-content: space-around; overflow: hidden; position: relative;}
         #next {padding: 40px;}
-        #sr {width: 1000px; height: 310px; display: flex;}
+        #sr {width: 1080px;  display: flex; float: right;}
         
 
         #ex {width: 1200px; height: 900px; display: flex; margin: 0 auto!important;}
@@ -428,7 +435,8 @@
         </video>
        
     <div id="explore">
-        <p>title text</p><br><br>
+        <br><br>
+        <p>  KAIYUKAN Aquarium<br>Explore Kaiyukan</p>
         <div id="slid_r">
             <button id="prev"><img src="img/but_le.png" alt="b"></button>
             <a href=""><img src="img/gallery-5.png" alt="5">
@@ -452,16 +460,18 @@
             <a href=""><img src="img/gallery-11.png" alt="11">
             </a>
         </div>
-   
+        <p>Look, listen, and feel</p>
+        <p>New Interactive Exhibit Area</p>
         <div id="sr">
             <div id="slid">
                 <a href=""><img src="img/pic-1.jpg" alt="1"></a>
+                <a href=""><img src="img/p2.jpg" alt="1"></a>
+                <a href=""><img src="img/p3.jpg" alt="3"></a>
                 <a href=""><img src="img/pic-3.jpg" alt="3"></a>
-                <a href=""><img src="img/pic-4.jpg" alt="4"></a>
+                <a href=""><img src="img/p1.jpg" alt="4"></a>
                 <a href=""><img src="img/pic-6.jpg" alt="6"></a>
                 <a href=""><img src="img/pic-5.jpg" alt="5"></a>
-                <a href=""><img src="img/pic-1.jpg" alt="1"></a>
-                <a href=""><img src="img/pic-3.jpg" alt="3"></a>
+                
                 <a href=""><img src="img/pic-4.jpg" alt="4"></a>
             </div>
             <button id="next"><img src="img/but_r.png" alt="b"></button>
