@@ -10,6 +10,27 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
 
 
+
+        <script>
+
+
+function. openNav() {
+
+document.getElementById("myNav").style.width = "100%";
+
+}
+
+
+function closeNav() {
+
+document.getElementById("myNav").style.width = "0%";
+
+}
+
+
+
+
+    </script>
     <style>
         * {
             margin: 0 auto;
@@ -582,6 +603,9 @@
             align-items: flex-start;
             display: none;
         }
+        .menu {width: 100px; height: 70px; display: flex; align-items: center; margin:0 10px;  padding:0 15px;}
+        .menu span {font-size: 30px;}
+      
 
 
         footer {
@@ -661,14 +685,14 @@
         <div id="header_top">
             <h1><a href="">Osaka Aquarium Kaiyukan</a></h1>
 
-            <div class="B_box">
+            <div class="menu">
                 <a href="javascript:void(0)" class="a" onclick="openNav()"><p>Menu</p></a>
                 <img src="img/icon.wb1.png" id="b" onclick="openNav()">
             </div>
         </div>
 
         <div id="menu_slid" class="overlay">
-            <div class="B_box">
+            <div class="menu">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Close</a>
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><h1>X</h1></a>
             </div>
