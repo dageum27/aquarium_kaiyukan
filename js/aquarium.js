@@ -42,7 +42,7 @@ $('#next').click(function () {
 
 $(document).ready(function () {
     $("#title_box").click(function () {
-        $("#news").slideToggle();
+        $("#news").slideToggle('fast');
         $("#more").toggle();
         $("#close").toggle();
     });

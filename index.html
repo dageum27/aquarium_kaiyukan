@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="js/aquarium.js"></script>
+    
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
 
 
@@ -37,8 +37,9 @@
         }
 
         li:nth-of-type(1) {
-            font-size: 21px;
+            font-size: 20px;
             padding: 10px 0;
+            font-weight: bold;
         }
 
         #main {
@@ -99,7 +100,7 @@
         }
 
         #title_box {
-            width: 980px;
+            width: 950px;
             display: flex;
             display: flex;
             justify-content: center;
@@ -121,7 +122,7 @@
         }
 
         #title_box1 {
-            width: 830px;
+            width: 800px;
             height: 108px;
             background-color: aliceblue;
             color: #163073;
@@ -231,7 +232,7 @@
             padding-bottom: 50px;
         }
 
-        #explore {
+        #explore { width: 100%; height: 100%;
             position: relative;
             z-index: 1;
         }
@@ -239,6 +240,8 @@
         #explore>.see {
             padding: 10px 50px 5px 0;
         }
+
+        #explore>.see a {color: aliceblue;}
 
         #explore>p:nth-of-type(1) {
             text-align: left;
@@ -260,7 +263,7 @@
             padding: 10px 50px 5px 0;
         }
 
-        #explore a img:hover {
+        #slid_r a img:hover {
             opacity: 0.8;
         }
 
@@ -287,7 +290,7 @@
             position: absolute;
             z-index: 0;
             width:100%;
-            min-height: 100%;
+            height: 125%;
             display: block;
         }
 
@@ -311,7 +314,7 @@
         #slid_r {
             width: 600px;
             display: flex;
-            margin: 10px 20px 400px 77px;
+            margin: 10px 20px 380px 77px;
             overflow: hidden;
             position: relative;
         }
@@ -342,17 +345,19 @@
         }
 
         #ex {
-            margin-top: 400px;
-            width: 1280px;
+            margin-top: 200px;
+            width: 100%; height: 100%;
+            background-image: linear-gradient(#0026d7,#0029b8,rgb(242, 242, 242));
         }
 
         #e1 img {
             width: 580px;
             height: 400px;
-            padding: 20px;
+            padding: 10px;
         }
 
         #e1 {
+            padding-top: 30px;
             width: 1280px;
             display: flex;
             flex-wrap: nowrap;
@@ -391,18 +396,18 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            padding-top: 200px;
+            padding-top: 120px;
         }
 
         .e2_box {
             width: 295px;
-            height: 380px;
+            height: 420px;
         }
 
         #e2 img {
             width: 295px;
             height: 320px;
-            margin: 0;
+            
         }
 
         .e2_box h5 {
@@ -413,10 +418,11 @@
         }
 
         .e2_box:hover {
-            border: 10px aliceblue solid;
+            
             opacity: 0.7;
             transform: scale(1.02);
         }
+
 
         #researchstudy {
             width: 1280px;
@@ -526,6 +532,7 @@
             font-size: 13px;
             padding: 5px 15px;
             margin: 10px;
+            font-family:"HY울릉도S";
         }
 
         #map {
@@ -597,13 +604,14 @@
         }
 
         footer button {
+            font-size: 15px;
             width: 180px;
             height: 50px;
             background-color:
                 #0F0FA4;
             color: aliceblue;
             padding: 10px;
-            margin: 50px auto;
+            margin: 40px auto;
         }
 
         #f_ar {
@@ -635,12 +643,14 @@
             padding: 20px;
         }
 
+        footer > h6 {font-family:"HY울릉도S";}
+
 
         @media screen and (max-width: 600px) {}
 
         @media screen and (min-width: 600px) {}
 
-        @media screen and (min-width: 1100px) {}
+        @media screen and (min-width: 1200px) {}
     </style>
 
 </head>
@@ -836,12 +846,10 @@
     </video> -->
     <img src="img/20220525_185313.png" id="back">
     <div id="explore">
-
         <br><br>
         <p>Aquarium Explore Gallery <br>Lean more about the living creatures in Kaiyukan</p>
         <button id="prev"><img src="img/but_le.png" alt="b"></button>
         <div id="slid_r">
-
             <div id="show">
                 <a href=""><img src="img/gallery-7.png" alt="7"></a>
                 <a href=""><img src="img/gallery-2.png" alt="2"></a>
@@ -1031,8 +1039,7 @@
     <footer>
         <h2>Osaka Aquarium Kaiyukan</h2>
         <br>
-        <h5></h5>
-        <button>Sign Up</button>
+        <button><b>Sign Up</b></button>
         <div id="f_ar">
             <div id="f_menu">
                 <ul>
@@ -1072,7 +1079,7 @@
                 </ul>
             </div>
             <div id="sns">
-                Follow Us <br><br><br>
+               <b>Follow Us</b> <br><br><br>
                 <a href=""><img src="img/sns.png" alt=""></a>
                 <a href=""><img src="img/sns_02.png" alt=""></a>
                 <a href=""><img src="img/sns_facebook.png" alt=""></a>
