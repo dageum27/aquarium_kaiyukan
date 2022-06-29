@@ -1,293 +1,709 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="js/aquarium.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#title_box").click(function () {
-               $("#news").slideToggle();
-               $("#more").toggle();
-               $("#close").toggle();
-            });
-        });
-
-        $(document).ready(function() {
-            var totalNum = $("#slid_r > img").length // 10
-            var currentNum = 1;
-            $("#pre").click
-         
-        });
-
-        $(function() {
-            $("#slide1").click(function() {
-            $("#1").show();
-            $("#2").hide();
-            $("#3").hide();
-            $("#4").hide();
-        });
-
-        $("#slide2").click(function() {
-            $("#2").show();
-            $("#1").hide();
-            $("#3").hide();
-            $("#4").hide();
-        });
-
-        $("#slide3").click(function() {
-            $("#3").show();
-            $("#1").hide();
-            $("#2").hide();
-            $("#4").hide();
-        });
-
-        $("#slide4").click(function() {
-            $("#4").show();
-            $("#1").hide();
-            $("#2").hide();
-            $("#3").hide();
-        });
-});
 
 
-</script>
-
-    </script>
     <style>
-        *{margin: 0 auto; border: none; text-decoration: none; font-family: "HY울릉도M"; text-align: center;}
-        button {background: none; cursor: pointer;}
-        a, img {cursor: pointer;}
-        ul, li {list-style-type: none; padding: 5px;}
+        * {
+            margin: 0 auto;
+            border: none;
+            text-decoration: none;
+            font-family: "HY울릉도M";
+            text-align: center;
+        }
 
-        #main {width: 100%; height: 680px;}
-        #main img {width: 100%; height: 100%;}
-        #main .m_button {width: 100%; height: 680px; display: flex; 
-            justify-content: space-between; align-items: center;
-             margin: 0; padding: 0; cursor: pointer;}
-        h3 {letter-spacing: 15px; padding: 120px; font-size: 35px; 
-            color: #163073; margin-top: 100px;}
-        h3 > img {padding:0 22px;}    
-        .see {padding: 100px 0 100px 1000px; font-size: 20px; text-align: right; text-decoration: underline gold; }
-        .see a {color: #0F0FA4; padding: 5px 5px 0 5px;}
-        .see a:hover {background-color: #0F0FA4; color: aliceblue;}
+        button {
+            background: none;
+            cursor: pointer;
+        }
 
-        #news_box {margin: 0;}
-        #title_box {width: 980px; display: flex; display: flex; 
-            justify-content: center;  margin-top: -30px; 
-            box-shadow: 2px 1px 2px rgb(201, 201, 201);}
-        #title_box1 p {font-size: 35px; padding: 30px; letter-spacing: 10px;}
-        #title_box1 span {font-family: "함초롬바탕 확장"; font-size: 15px;
-        letter-spacing: 3px; cursor: pointer;}
-        #title_box1 {width: 830px; height: 108px; 
-            background-color: aliceblue; color: #163073; margin: 0;}
+        a,
+        img {
+            cursor: pointer;
+        }
 
-        .B_box {display: flex; align-items: center; justify-content: space-around; margin: 0; 
-            width: 150px; height: 108px; background-color: #163073; color: aliceblue; 
-            box-shadow: 0 2px 2px grey;
-            cursor: pointer;}
+        ul,
+        li {
+            list-style-type: none;
+            padding: 5px;
+            text-align: left;
+        }
 
-        .B_box img, .B_box h1 {padding: 15px 20px 15px 0px; margin: 0;font-family: "함초롬바탕 확장"; }
-        .B_box p{margin: 0; padding: 15px 0px 15px 20px;}
+        li:nth-of-type(1) {
+            font-size: 21px;
+            padding: 10px 0;
+        }
 
-        #news {background-color: aliceblue; width: 900px; height: 880px; 
-            padding: 40px; 
-             display: flex; justify-content: center;}
-        .n_input {position: absolute; z-index: 0;  padding-top: 850px;}   
+        #main {
+            width: 100%;
+            height: 680px;
+        }
 
-        .l_n_box {width: 830px; height: 750px; position: absolute; z-index: 3;}
-        .l_n_box h4 {color: #163073; padding: -3px 20px ; font-size: 25px;}
-        .l_n_box * {text-align: left; font-family: "함초롬바탕 확장"; font-size: 17px;}
-        .l_n_box p a b {color: red; font-size: 30px;}
-        .n_a {display: flex;}
-        .n_a img {width: 280px; height: 280px; padding: 20px 0;}
-        .n_img {width: 300px; margin-top: 50px;}
-        
-        .v_box {width: 300px; height: 300px; background-color: #163073;
-        background-image: radial-gradient(rgb(74, 5, 184),  rgb(10, 239, 255));}
-        .v_box img {width: 85px; height: 85px; padding: 50px;}
-        .v_box p {font-size: 22px; color: aliceblue; padding: 15px;}
-        #visit {width: 1200px; display: flex; padding-bottom: 50px;}
+        #main img {
+            width: 100%;
+            height: 100%;
+        }
 
-        #explore {position: relative; z-index: 2;}
-        #explore > p:nth-of-type(1) {text-align: left; padding: 10px 0 0 50px; color: aliceblue; font-size: 20px;}
-        #explore > p:nth-of-type(2) {text-align: right; color: aliceblue; padding: 10px 50px 5px 0;}
-        #explore > p:nth-of-type(3) {text-align: right; font-size: 25px; color: aliceblue; padding: 10px 50px 5px 0;}
-        #slid_r a img:hover {border: 5px aliceblue solid; opacity: 0.8; transform: scale(1.15);}
-        #slid a img:hover {opacity: 0.8; transform: scale(1.15);}
+        #main .m_button {
+            width: 100%;
+            height: 680px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+        }
 
-        #explore button img {width: 35px; height: 60px;}
-        #bVideo {position: absolute; z-index: 1;  min-width: 100%; min-height: 100%; display: block;}
-       
-        #slid_r img {width: 90px; height: 90px; margin: 15px;}
-        #slid img {width: 200px; height: 300px; margin: 20px;}
-        
-        #slid_r {width: 680px; display: flex; margin: 10px 20px 400px 0; overflow: hidden;}
-        #slid_r >a img:hover { border-radius: 50px;}
-        #slid {width: 980px; display: flex; justify-content: space-around; overflow: hidden; position: relative;}
-        #next {padding: 40px;}
-        #sr {width: 1080px;  display: flex; float: right; }
-        
-        #ex {width: 1200px; height: 900px; display: flex; margin: 0 auto!important; padding-top: 130px;}
-       
-        #e1 img {width: 660px; height: 405px;}
+        h3 {
+            letter-spacing: 15px;
+            padding: 120px;
+            font-size: 35px;
+            color: #163073;
+            margin-top: 100px;
+        }
 
-        #e2 {width: 660px; height: 460px; display: flex; 
-            justify-content: space-between; 
-            align-items: flex-end;}
-        .e2_box {width: 295px; height: 380px; margin: 0;}    
-        #e2 img {width: 295px; height: 320px; margin: 0;}
-        .e2_box h5 {width: 295px; height: 60px; background-color: aliceblue; color: #163073;}
+        h3>img {
+            width: 29px;
+            height: 29px;
+            padding: 0 22px;
+        }
 
-        #e3 {width: 300px; height: 850px; display: flex; flex-direction: column; justify-content: flex-start; margin: 10px;}
-        #e3> p { text-align: left!important; margin: 10px 30px;}
-        .e3_box img {width: 99px; height: 99px;}
-        .e3_box a {width: 300px; height: 100px; display: flex;
-             flex-flow: nowrap; padding: 20px;}
-        .e3_box h6 {width: 200px; height: 90px;  font-family: "함초롬바탕 확장"; font-size: 20px; padding: 10px; text-align: left}
+        .see {
+            font-size: 20px;
+            text-decoration: underline gold;
+            text-align: right;
+            padding: 20px 50px 20px 800px;
+        }
 
-        #research {width: 1200px; height: 900px; display: flex;}
-        #research img {width: 100%; height: 100%;}
-        .scrolltext {width: 500px; height: 500px; padding: 80px 10px 0 10px;font-family: "함초롬바탕 확장"; font-size: 15px;}
-      
-        #around_map {width: 1000px; height: 600px; }
-        
-        #around {width: 1200px; height: 850px; display: flex; padding: 80px; }
-   
-        #af1 {width: 700px;}
-        #af2 {width: 660px; height: 405px; display: flex;  justify-content: space-between;}
-        .af_box {margin: 0;}
-        
-        .af_box img {width: 295px; height: 260px; margin-top: 40px; }
-        .textbox {width: 295px; height: 120px; background-color: aliceblue; margin-top: -36px;}
-        #af3 {width: 400px; display: flex; flex-direction: column;}
-        .af3_box a {width: 300px; height: 100px; display: flex; padding: 10px;}
-        .af3_box img {width: 90px; height: 90px;}
-        .af3_box h6 {width: 200px; height: 90px; text-align: left; font-size: 17px; 
-            padding: 5px 15px; margin: 10px;}
+        .see a {
+            color: #0F0FA4;
+            padding: 10px 5px 0 5px;
+            text-align: right;
+        }
 
-        header, footer {font-family: 'HY울릉도B'; color: aliceblue; text-align: center;}
-        #header_top {width: 100%; height: 70px; background-color: #0F0FA4; color: 
-            aliceblue; display: flex; align-items: center; justify-content: space-between;}
-        #header_top h1 {width: 500px; margin: 0px;}
-        header a:hover, footer a:hover, li:hover,header img:hover { opacity: 0.4;}
-        #header_top  a {color: aliceblue;}
-        .menu {width: 100px; height: 70px; display: flex; align-items: center; margin:0 10px; 
-            background-color: #0F0FA4; color: aliceblue; padding:0 15px;}
-        .menu span {font-size: 30px; color: aliceblue;}
-        #menu_slid {width: 100%; height: 300px; background-color: #0F0FA4; color: 
-            aliceblue; display: flex; align-items: flex-start; display: none;}
-        #menu_slid> .menu {line-height: px;}
+        .see a:hover {
+            background-color: #0F0FA4;
+            color: aliceblue;
+        }
 
-        footer {width: 100%; height: 420px; background-color: rgb(1, 2, 36);}
-        header button:hover, footer button:hover {opacity: 0.5; color: #0F0FA4; 
-            background-color: aliceblue;}
-        footer button {width: 180px; height: 50px;background-color: 
-            #0F0FA4; color: aliceblue; padding: 10px; margin: 30px auto;}
-        #f_ar {display: flex; flex-wrap: wrap;}
+        #news_box {
+            margin: 0;
+        }
 
-        #f_menu {width: 600px; display: flex;}
-        #sns {width: 250px; height: 100px;}
+        #title_box {
+            width: 980px;
+            display: flex;
+            display: flex;
+            justify-content: center;
+            margin-top: -30px;
+            box-shadow: 2px 1px 2px rgb(201, 201, 201);
+        }
+
+        #title_box1 p {
+            font-size: 35px;
+            padding: 30px;
+            letter-spacing: 10px;
+        }
+
+        #title_box1 span {
+            font-family: "함초롬바탕 확장";
+            font-size: 15px;
+            letter-spacing: 3px;
+            cursor: pointer;
+        }
+
+        #title_box1 {
+            width: 830px;
+            height: 108px;
+            background-color: aliceblue;
+            color: #163073;
+            margin: 0;
+        }
+
+        .B_box {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 0;
+            width: 150px;
+            height: 108px;
+            background-color: #163073;
+            color: aliceblue;
+            cursor: pointer;
+        }
+
+        .B_box img,
+        .B_box h1 {
+            padding: 15px 20px 15px 0px;
+            margin: 0;
+            font-family: "함초롬바탕 확장";
+        }
+
+        .B_box p {
+            margin: 0;
+            padding: 15px 0px 15px 20px;
+        }
+
+        #news {
+            background-color: aliceblue;
+            width: 900px;
+            height: 880px;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .n_input {
+            position: absolute;
+            z-index: 0;
+            padding-top: 850px;
+        }
+
+        .l_n_box {
+            width: 830px;
+            height: 750px;
+            position: absolute;
+            z-index: 3;
+        }
+
+        .l_n_box h4 {
+            color: #163073;
+            padding: -3px 20px;
+            font-size: 25px;
+        }
+
+        .l_n_box * {
+            text-align: left;
+            font-family: "함초롬바탕 확장";
+            font-size: 17px;
+        }
+
+        .l_n_box p a b {
+            color: red;
+            font-size: 30px;
+        }
+
+        .n_a {
+            display: flex;
+        }
+
+        .n_a img {
+            width: 280px;
+            height: 280px;
+            padding: 20px 0;
+        }
+
+        .n_img {
+            width: 300px;
+            margin-top: 50px;
+        }
+
+        .v_box {
+            width: 300px;
+            height: 300px;
+            background-color: #163073;
+            background-image: radial-gradient(rgb(74, 5, 184), rgb(10, 239, 255));
+        }
+
+        .v_box img {
+            width: 85px;
+            height: 85px;
+            padding: 50px;
+        }
+
+        .v_box p {
+            font-size: 22px;
+            color: aliceblue;
+            padding: 15px;
+        }
+
+        #visit {
+            width: 1200px;
+            display: flex;
+            padding-bottom: 50px;
+        }
+
+        #explore {
+            position: relative;
+            z-index: 1;
+        }
+
+        #explore>.see {
+            padding: 10px 50px 5px 0;
+        }
+
+        #explore>p:nth-of-type(1) {
+            text-align: left;
+            padding: 10px 0 0 50px;
+            color: aliceblue;
+            font-size: 20px;
+        }
+
+        #explore>p:nth-of-type(2) {
+            text-align: right;
+            color: aliceblue;
+            padding: 10px 50px 5px 0;
+        }
+
+        #explore>p:nth-of-type(3) {
+            text-align: right;
+            font-size: 25px;
+            color: aliceblue;
+            padding: 10px 50px 5px 0;
+        }
+
+        #explore a img:hover {
+            opacity: 0.8;
+        }
 
 
+        #explore button {
+            position: absolute;
+            z-index: 5;
+        }
+
+        #explore button img {
+            width: 35px;
+            height: 60px;
+        }
+
+        #bVideo {
+            position: absolute;
+            z-index: 0;
+            min-width: 100%;
+            min-height: 100%;
+            display: block;
+        }
+
+        #back {
+            position: absolute;
+            z-index: 0;
+            width:100%;
+            min-height: 100%;
+            display: block;
+        }
+
+        #slid_r img {
+            width: 90px;
+            height: 90px;
+            margin: 15px;
+        }
+
+        #slid img {
+            width: 200px;
+            height: 300px;
+            margin: 20px;
+        }
+
+        #prev {
+            top: 130px;
+            left: 20px;
+        }
+
+        #slid_r {
+            width: 600px;
+            display: flex;
+            margin: 10px 20px 400px 77px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #show {
+            width: 1800px;
+            display: flex;
+        }
+
+        #sr {
+            width: 960px;
+            float: right;
+            position: relative;
+            overflow: hidden;
+            margin-right: 100px;
+        }
+
+        #slid {
+            width: 1960px;
+            float: right;
+            position: relative;
+        }
+
+        #next {
+            padding: 40px;
+            right: 20px;
+            bottom: -250px;
+        }
+
+        #ex {
+            margin-top: 400px;
+            width: 1280px;
+        }
+
+        #e1 img {
+            width: 580px;
+            height: 400px;
+            padding: 20px;
+        }
+
+        #e1 {
+            width: 1280px;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .e {
+            width: 600px;
+        }
+
+        .e p {
+            font-size: 15px;
+        }
+
+        .hide>p:nth-of-type(1) {
+            font-size: 20px;
+        }
+
+        .hide {
+            position: relative;
+            z-index: 6;
+            opacity: 0;
+            margin-top: -370px;
+            background: rgb(202, 202, 202, 0.2);
+            width: 500px;
+            height: 300px;
+            color: aliceblue;
+        }
+
+        .hide:hover {
+            opacity: 1;
+        }
+
+        #e2 {
+            width: 1280px;
+            height: 460px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-top: 200px;
+        }
+
+        .e2_box {
+            width: 295px;
+            height: 380px;
+        }
+
+        #e2 img {
+            width: 295px;
+            height: 320px;
+            margin: 0;
+        }
+
+        .e2_box h5 {
+            width: 295px;
+            height: 80px;
+            background-color: aliceblue;
+            color: #163073;
+        }
+
+        .e2_box:hover {
+            border: 10px aliceblue solid;
+            opacity: 0.7;
+            transform: scale(1.02);
+        }
+
+        #researchstudy {
+            width: 1280px;
+        }
+
+        #research {
+            width: 1200px;
+            height: 900px;
+            display: flex; 
+            align-items: flex-end;
+        }
+
+        #research img {
+            width: 100%;
+            height: 100%;
+           
+        }
+
+        #hide {
+            position: relative; z-index: 6;
+            opacity: 0.1;
+            height: 600px; width: 350px;
+            padding: 10px 10px 90px 10px ;
+            font-family: "함초롬바탕 확장";
+            font-size: 15px;}
+
+        #hide:hover {
+            opacity: 1;}
 
 
+        #around_local {
+            width: 1280px;
+            text-align: left;
+        }
+
+        #around_map {
+            width: 1280px;
+            height: 600px;
+        }
+
+        #around {
+            width: 1280px;
+            height: 850px;
+            display: flex;
+            padding: 100px;
+        }
+
+        #around a:hover {
+            opacity: 0.9;
+            transform: scale(1.01);
+        }
+
+        #af1 {
+            width: 700px;
+        }
+
+        #af2 {
+            width: 660px;
+            height: 405px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .af_box {
+            margin: 0;
+        }
+
+        .af_box img {
+            width: 295px;
+            height: 260px;
+            margin-top: 40px;
+        }
+
+        .textbox {
+            width: 295px;
+            height: 120px;
+            background-color: aliceblue;
+            margin-top: -36px;
+        }
+
+        #af3 {
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .af3_box {
+            padding: 10px;
+        }
+
+        .af3_box a {
+            width: 300px;
+            height: 100px;
+            display: flex;
+            color: #163073;
+        }
+
+        .af3_box img {
+            width: 90px;
+            height: 90px;
+        }
+
+        .af3_box h6 {
+            width: 200px;
+            height: 90px;
+            text-align: left;
+            font-size: 13px;
+            padding: 5px 15px;
+            margin: 10px;
+        }
+
+        #map {
+            padding: 100px 0;
+        }
+
+        header,
+        footer {
+            font-family: 'HY울릉도B';
+            color: aliceblue;
+            text-align: center;
+        }
+
+        #header_top {
+            width: 100%;
+            height: 70px;
+            background-color: #163073;
+            color:
+                aliceblue;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #header_top h1 {
+            width: 500px;
+            margin: 0px;
+        }
+
+        header a:hover,
+        footer a:hover,
+        header img:hover {
+            opacity: 0.6;
+        }
+
+        a {
+            color: aliceblue;
+        }
+
+        #menu_slid {
+            width: 100%;
+            height: 300px;
+            background-color: #0F0FA4;
+            color:
+                aliceblue;
+            display: flex;
+            align-items: flex-start;
+            display: none;
+        }
+
+
+        footer {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(1, 2, 36);
+            padding: 80px;
+            box-sizing: border-box;
+        }
+
+        header button:hover {
+            opacity: 0.5;
+            color: #0F0FA4;
+            background-color: aliceblue;
+        }
+
+        footer button:hover {
+            color: #0F0FA4;
+            background-color: aliceblue;
+        }
+
+        footer button {
+            width: 180px;
+            height: 50px;
+            background-color:
+                #0F0FA4;
+            color: aliceblue;
+            padding: 10px;
+            margin: 50px auto;
+        }
+
+        #f_ar {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .inme {
+            padding: -10px;
+        }
+
+        .inme li {
+            font-size: 14.5px;
+            padding: 2px;
+        }
+
+        #f_menu {
+            display: flex;
+        }
+
+        #f_menu ul {
+            width: 230px;
+            padding: 10px;
+        }
+
+        #sns {
+            width: 250px;
+            height: 100px;
+            padding: 20px;
+        }
+
+
+        @media screen and (max-width: 600px) {}
+
+        @media screen and (min-width: 600px) {}
+
+        @media screen and (min-width: 1100px) {}
     </style>
 
 </head>
+
 <body style="background-color: rgb(242, 242, 242);">
 
     <header>
         <div id="header_top">
             <h1><a href="">Osaka Aquarium Kaiyukan</a></h1>
-            
-            <div class="menu">
-                <a href="javascript:void(0)" class="a" onclick="openNav()">Menu</a>
+
+            <div class="B_box">
+                <a href="javascript:void(0)" class="a" onclick="openNav()"><p>Menu</p></a>
                 <img src="img/icon.wb1.png" id="b" onclick="openNav()">
             </div>
         </div>
-    
+
         <div id="menu_slid" class="overlay">
-            <div class="menu">
+            <div class="B_box">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Close</a>
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><h1>X</h1></a>
             </div>
-            <div>
-                menu
-                <ul>
-                    <li></li>
-                    <li><a href="">list1</a></li>
-                    <li><a href="">list1</a></li>
-                    <li><a href="">list1</a></li>
-                    <li><a href="">list1</a></li>
-                </ul>
-            </div>
-    
-            <div>
-                menu
-                <ul>
-                    <li></li>
-                    <li><a href="">list1</a></li>
-                    <li><a href="">list1</a></li>
-                    <li><a href="">list1</a></li>
-                    <li><a href="">list1</a></li>
-                </ul>
-            </div>
-        </div>
+            <div id="f_ar">
+                <div id="f_menu">
+                    <ul>
+                        <li>Visit us</li>
+                        <li><a href="">Opening Hours</a></li>
+                        <li><a href="">Tickets</a></li>
+                        <li>
+                            <ul class="inme">
+                                <li><a href="">Online Tickets</a></li>
+                                <li><a href="">Osaka Kaiyu Ticket</a></li>
+                                <li><a href="">KAIYUKAN Annual Pass</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Access</a></li>
+                        <li><a href="">Information</a></li>
+                    </ul>
+                    <ul>
+                        <li>Explore Kaiyukan</li>
+                        <li><a href="">About KAIYUKAN</a></li>
+                        <li><a href="">Permanent Exhibit</a></li>
+                        <li><a href="">Interactive Exhibit</a></li>
+                        <li><a href="">Feeding Times for Marine Animals</a></li>
+                        <li><a href="">Theme and Concept of the KAIYUKAN</a></li>
+                        <li><a href="">KAIYUKAN Night Aquarium</a></li>
+                    </ul>
+                    <ul>
+                        <li>Research and study activities</li>
+                        <li><a href="">Research Activities</a></li>
+                    </ul>
+                    <ul>
+                        <li>Restaurant & shopping</li>
+                        <li><a href="">Tempozan Harbor Village</a></li>
+                        <li><a href="">Naniwa Kuishinbo Yokocho</a></li>
+                        <li><a href="">Cruise Ship</a></li>
+                        <li><a href="">Giant Ferris Wheel</a></li>
+                        <li><a href="">Captain Line</a></li>
+                    </ul>
+                </div>
     </header>
-    
+
     <div id="main">
         <img src="img/m1c.jpg" alt="m1" id="slider">
-
-        <script>
-            var ct = 0;
-            var imgs = new Array("img/m2c.jpg", "img/m3c.jpg", "img/m4c.jpg", "img/m1c.jpg",);
-            setTimeout(progress, 2000);
-            function progress() {
-                slider.src = imgs[ct];
-                ct++;
-                setTimeout(progress, 3000);
-                if (ct > 3) {
-                    ct = 0
-                }
-            }
-
-            
-        $(function(){
-
-            var page = 0;
-
-            $('#prev').click(function () {
-
-                page--;
-
-                if (page < 0) {
-                    page = 0;
-                    return;
-                }
-
-                $('#slid_r').stop().animate({ marginLeft: -120 * page }, 800);
-
-            });
-
-            $('#next').click(function () {
-
-                page++;
-
-                if (page > $('.slid').length-3) {
-                    page = $('.slidi').length-3;
-                    return;
-                }
-
-                $('#slid').stop().animate({ marginLeft: -236 * page }, 800);
-            });
-
-        });
-    </script>
-
-
     </div>
 
     <div id="news_box">
@@ -303,7 +719,7 @@
                 <h1>X</h1>
             </div>
         </div>
-    
+
         <div id="news" style="display: none;">
             <div class="n_input">
                 <input type="radio" name="slide" id="slide1" checked>
@@ -339,7 +755,7 @@
                 <br><br>
                 <p><a href=""><b>Click here to buy your tickets.</b></p></a><br><br><br>
             </div>
-        
+
             <div class="l_n_box" id="2" style="display: none;">
                 <div class="n_a">
                     <div style="width: 500px;">
@@ -371,16 +787,19 @@
                 <h4>Osaka Free Wifi can be used around the Kaiyukan.</h4><br><br><br>
                 <img src="img/innews.jpg" alt="wi" width="600px" height="300px" id="in_img">
             </div>
-        
+
             <div class="l_n_box" id="4" style="display: none;">
                 <div class="n_a">
-                    <div style="width: 500px;" >
+                    <div style="width: 500px;">
                         <br><br>
                         <h4>We provide the guide map of 29 languages.</h4><br><br>
                         <p>In Kaiyukan, we provide the guide map of 29 languages, as below. <br><br>
-                        English, Hungle, Thai, Traditional and Simplified Chinese and Japanese version are available in the front of Service Counter.<br><br>
-                        Concerning the below 23 languages, please contact the staff at Service Counter.<br><br>
-                        Arabic, Check, Danish, Dutch, Finnish, France, German, Hebrew, Hindi, Indonesian, Italian, Malay, Maori, Norwegian, Philippine, Polish, Portuguese, Russian, Spanish, Swedish, Tamil, Turkish, Vietnam</p>
+                            English, Hungle, Thai, Traditional and Simplified Chinese and Japanese version are available
+                            in the front of Service Counter.<br><br>
+                            Concerning the below 23 languages, please contact the staff at Service Counter.<br><br>
+                            Arabic, Check, Danish, Dutch, Finnish, France, German, Hebrew, Hindi, Indonesian, Italian,
+                            Malay, Maori, Norwegian, Philippine, Polish, Portuguese, Russian, Spanish, Swedish, Tamil,
+                            Turkish, Vietnam</p>
                     </div>
                     <div class="n_img">
                         <img src="img/kaiyu_img.jpg" alt="img">
@@ -389,11 +808,9 @@
             </div>
         </div>
     </div>
-        
-        <div class="l_n_box"></div>
-        </div>
 
-    
+
+
     <h3><img src="img/icon_bwl.png" alt="icon">Visit Us</h3>
     <div id="visit">
         <a href="">
@@ -414,38 +831,39 @@
     </div>
 
     <h3><img src="img/icon_bwl.png" alt="icon">Explore</h3>
-    <video autoplay muted loop id="bVideo">
-            <source src="mp4/back_1.mp4" type="video/mp4">
-        </video>
-       
+    <!-- <video autoplay muted loop id="bVideo">
+        <source src="mp4/back_1.mp4" type="video/mp4">
+    </video> -->
+    <img src="img/20220525_185313.png" id="back">
     <div id="explore">
+
         <br><br>
         <p>Aquarium Explore Gallery <br>Lean more about the living creatures in Kaiyukan</p>
+        <button id="prev"><img src="img/but_le.png" alt="b"></button>
         <div id="slid_r">
-            <button id="prev"><img src="img/but_le.png" alt="b"></button>
-            <a href=""><img src="img/gallery-5.png" alt="5">
-            </a>
-            <a href=""><img src="img/gallery-10.png" alt="10">
-            </a>
-            <a href=""><img src="img/gallery-9.png" alt="9">
-            </a>
-            <a href=""><img src="img/gallery-8.png" alt="8">
-            </a>
-            <a href=""><img src="img/gallery-2.png" alt="2">
-            </a>
-            <a href=""><img src="img/gallery-1.png" alt="1">
-            </a>
-            <a href=""><img src="img/gallery-4.png" alt="4">
-            </a>
-            <a href=""><img src="img/gallery-5.png" alt="5">
-            </a>
-            <a href=""><img src="img/gallery-7.png" alt="7">
-            </a>
-            <a href=""><img src="img/gallery-11.png" alt="11">
-            </a>
+
+            <div id="show">
+                <a href=""><img src="img/gallery-7.png" alt="7"></a>
+                <a href=""><img src="img/gallery-2.png" alt="2"></a>
+                <a href=""><img src="img/gallery-11.png" alt="11"></a>
+                <a href=""><img src="img/gallery-15.png" alt="15"></a>
+                <a href=""><img src="img/gallery-5.png" alt="5"></a>
+                <a href=""><img src="img/gallery-10.png" alt="10"></a>
+                <a href=""><img src="img/gallery-9.png" alt="9"></a>
+                <a href=""><img src="img/gallery-8.png" alt="8"></a>
+                <a href=""><img src="img/gallery-1.png" alt="1"></a>
+                <a href=""><img src="img/gallery-4.png" alt="4"></a>
+                <a href=""><img src="img/gallery-5.png" alt="5"></a>
+                <a href=""><img src="img/gallery-12.png" alt=""></a>
+                <a href=""><img src="img/gallery-13.png" alt=""></a>
+                <a href=""><img src="img/gallery-14.png" alt=""></a>
+                <a href=""><img src="img/gallery-16.png" alt=""></a>
+            </div>
+
         </div>
         <p>Look, listen, and feel</p>
         <p>New Interactive Exhibit Area</p>
+        <p class="see"><a href="">See More</a></p>
         <div id="sr">
             <div id="slid">
                 <a href=""><img src="img/p16.jpg" alt="1"></a>
@@ -457,195 +875,220 @@
                 <a href=""><img src="img/p14.jpg" alt="5"></a>
                 <a href=""><img src="img/pic-4.jpg" alt="4"></a>
             </div>
-            <button id="next"><img src="img/but_r.png" alt="b"></button>
         </div>
+        <button id="next"><img src="img/but_r.png" alt="b"></button>
     </div>
-    
-    
+
     <div id="ex">
         <div id="e1">
-            <a href=""><img src="img/concept_img.png" alt="concept_img"></a>
-            <div class="hide">
-            <h5>Pacific Ocean<br>Whale shark / Rhincodon typus</h5><br>
-            <h6>The Pacific Ocean,<br> a massive body of water surrounded<br>
-                by five continents and covering one third of the earth’s surface.<br>
-                In this exhibit,<br> an aquarium 9 meters deep and 34 meters long<br>
-                at its longest represents the ocean<br> with a total of 5,400 tons of water.</h6>
-            
-        </div>
-            <div id="e2">
-                <div class="e2_box">
-                    <a href=""><img src="img/pic-1.jpg" alt="">
-                        <h5><br>Japan Forest<br>Asian small clawed otter / Aonyx cinerea</h5>
-                    </a>
-                </div>
-                <div class="e2_box">
-                    <a href=""><img src="img/pic-3.jpg" alt="">
-                        <h5><br>Monterey Bay<br>Largha seal / Phoca largha</h5>
-                    </a>
+            <div class="e">
+                <a href=""><img src="img/concept_img.png" alt="concept_img"></a>
+                <div class="hide">
+                    <br><br>
+                    <p>Pacific Ocean<br>Whale shark / Rhincodon typus</p><br><br>
+                    <p><a href=""> The Pacific Ocean,<br> a massive body of water surrounded<br>
+                            by five continents and covering one third of the earth’s surface.<br>
+                            In this exhibit,<br> an aquarium 9 meters deep and 34 meters long<br>
+                            at its longest represents the ocean<br> with a total of 5,400 tons of water.</a></p>
                 </div>
             </div>
-        </div>
-    
-        <div id="e3">
-            <p>title text</p><br><br>
-            <div class="e3_box">
-                <a href=""><img src="img/gallery-15.png" alt="">
-                </a>
-            </div>
-            <div class="e3_box">
-                <a href=""><img src="img/gallery-12.png" alt="">
-                </a>
-            </div>
-            <div class="e3_box">
-                <a href=""><img src="img/gallery-13.png" alt="">
-                </a>
-            </div>
-            <div class="e3_box">
-                <a href=""><img src="img/gallery-14.png" alt="">
-                </a>
-            </div>
-            <div class="e3_box">
-                <a href=""><img src="img/gallery-16.png" alt="">
-                </a>
+            <div class="e">
+                <a href=""><img src="img/pic-4.jpg" alt="concept_img"></a>
+                <div class="hide">
+                    <br><br>
+                    <p>Antarctica<br>King penguin / Aptenodytes patagonicus</p><br><br>
+                    <p><a href="">The ice-shrouded continent of Antarctica.<br> We have recreated <br> the harsh
+                            Antarctic
+                            environment
+                            of rocks and ice in this exhibit,<br>
+                            letting us present penguins’ humorous behavior.<br>
+                            on land alongside their swift movements in the water.<br></a></p>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <p class="see"><a href=""><br><br>See More</a></p>
-    
-    <h3><img src="img/icon_bwl.png" alt="icon"> Research Activities</h3>
-    <div id="research">
-        <img src="img/sav.png" alt="sav">
-        <div class="scrolltext">
-            <p> Osaka Aquarium Biological Research Institute of Iburi Center (OBIC) 
-                </p><hr><br>
-                Iburi of Tosashimizu City,<br> Kochi Prefecture is home to many of the marine animals exhibited at the KAIYUKAN. <br>
-                In the coastal area bordering the Pacific Ocean,<br> whale sharks and other large migratory fishes as well as various other marine species come into <br>the region carried by the Japan Current (also known as the Kuroshio Current).<br><br>
-                In collaboration with local fishermen, OBIC collects marine animals to be exhibited at the KAIYUKAN and keeps them in a tank at OBIC or in a growing pool in Iburi Port in order to feed them and manage their health conditions. After thorough feeding training and health management, the marine animals are transported to the KAIYUKAN from OBIC to debut as exhibits of the aquarium.<br><br>
-                In a joint study with Kyoto University and Kochi University, and with the cooperation of local fishermen and other Iburi community members, OBIC has also worked on underwater biological research of marine animals and an investigation of fish species inhabiting nearby waters. The joint study results were published as a book titled “Fishes of the Kuroshio Current, Japan” on April 20, 2001.<br><br>
-                On December 12, 2009, OBIC established a second tank with a total volume of 3,300 tons of water (19 m long × 31 m wide × 5 m deep + 8 m long × 8 m wide × 5 m deep). In the second tank, OBIC staff members keep whale sharks and other large fish and carry out various health-management training programs, with the aim of conducting biological research and breeding studies on these mysterious marine creatures.<br><br>
+        <div id="e2">
+            <div class="e2_box">
+                <a href=""><img src="img/pic-1.jpg" alt="1">
+                    <h5><br>Japan Forest<br>Asian small clawed otter / Aonyx cinerea</h5>
+                </a>
+            </div>
+            <div class="e2_box">
+                <a href=""><img src="img/pic-3.jpg" alt="2">
+                    <h5><br>Monterey Bay<br>Largha seal / Phoca largha</h5>
+                </a>
+            </div>
+            <div class="e2_box">
+                <a href=""><img src="img/pic-6.jpg" alt="3">
+                    <h5><br>Tasman Sea<br>Pacific white-sided dolphin / Lagenorhynchus obliquidens</h5>
+                </a>
+            </div>
+            <div class="e2_box">
+                <a href=""><img src="img/pic-5.jpg" alt="4">
+                    <h5><br>Pacific Ocean<br>Whale shark / Rhincodon typus</h5>
+                </a>
+            </div>
+
         </div>
+        <p class="see"><a href="">See More</a></p>
     </div>
-    <p class="see"><a href="">See More</a></p>
-
-    <hr>
-    <h3><img src="img/icon.wbl.png" alt="icon"> Around Facility</h3>
-
-    <div id="around_map">
-        <img src="img/bt_map.png" alt="map"> 
     </div>
 
-    <div id="around">
-        <div id="af1">
-            <a href=""><img src="img/kaiyu_img.jpg" alt="Kaiyukan" width="660px" height="405px"></a>
-            <div id="af2">
-                <div class="af_box">
-                    <img src="img/shop_04.png" alt="boat" width="" height="">
-                    <div class="textbox">
-                        <br><br>
-                        <p>Cruise Ship Santa Maria</p>
+    <div id="researchstudy">
+        <h3><img src="img/icon_bwl.png" alt="icon"> Research Activities</h3>
+        <div id="research">
+            <img src="img/sav.png" alt="sav">
+            <div id="hide">
+                <p> Osaka Aquarium Biological Research Institute of Iburi Center (OBIC)</p><br>
+                Iburi of Tosashimizu City,<br> Kochi Prefecture is home to many of the marine animals exhibited at the
+                KAIYUKAN.<br>
+                In the coastal area bordering the Pacific Ocean,<br>
+                In a joint study with Kyoto University and Kochi University, and with the cooperation of local fishermen
+                and
+                other Iburi community members, OBIC has also worked on underwater biological research of marine animals
+                and
+                an investigation of fish species inhabiting nearby waters. The joint study results were published as a
+                book
+                titled “Fishes of the Kuroshio Current, Japan” on April 20, 2001.<br><br>
+                On December 12, 2009, OBIC established a second tank with a total volume of 3,300 tons of water <br><br>
+            </div>
+        </div>
+        <p class="see"><a href="">See More</a></p>
+    </div>
+
+    <div id="around_local">
+        <h3><img src="img/icon.wbl.png" alt="icon"> Around Facility</h3>
+        <div id="around_map">
+            <img src="img/bt_map.png" alt="map">
+            <p class="see"><a href="">See More</a></p>
+        </div>
+        <div id="around">
+            <div id="af1">
+                <a href=""><img src="img/kaiyu_img.jpg" alt="Kaiyukan" width="660px" height="405px"></a>
+                <div id="af2">
+                    <div class="af_box">
+                        <a href=""><img src="img/shop_04.png" alt="boat"></a>
+                        <div class="textbox">
+                            <br><br><br>
+                            <h4>Cruise Ship Santa Maria</h4>
+                            <p>refreshing sea breezes,cruise</p>
+                        </div>
+                    </div>
+                    <div class="af_box">
+                        <a href=""><img src="img/lego.png" alt="lego"></a>
+                        <div class="textbox">
+                            <br><br><br>
+                            <h4>LEGOLAD</h4>
+                            <p>discovery center Osaka</p>
+                        </div>
                     </div>
                 </div>
-                <div class="af_box">
-                    <img src="img/lego.png" alt="lego" width="" height="">
-                    <div class="textbox">
-                        <br><br><br>
-                        <h4>paragraph.</h4>
-                        <p>This is a paragraph.</p>
-                    </div>
+            </div>
+            <div id="af3">
+                <div class="af3_box">
+                    <a href=""><img src="img/shop_03.png" alt="">
+                        <h6>Tempozan Giant Ferris Wheel</h6>
+                    </a>
+                </div>
+                <div class="af3_box">
+                    <a href=""><img src="img/shop_05.png" alt="">
+                        <h6>Fast Shuttle Ferry Captain Line</h6>
+                    </a>
+                </div>
+                <div class="af3_box">
+                    <a href=""><img src="img/shop_01.png" alt="">
+                        <h6>Tempozan Marketplace</h6>
+                    </a>
+                </div>
+                <div class="af3_box">
+                    <a href=""><img src="img/shop_02.png" alt="">
+                        <h6>Naniwa Kuishinbo Yokocho</h6>
+                    </a>
+                </div>
+                <div class="af3_box">
+                    <a href=""><img src="img/shop_06.png" alt="">
+                        <h6>Hotel Seagull Tempozan Osaka</h6>
+                    </a>
+                </div>
+                <div class="af3_box">
+                    <a href=""><img src="img/shop_04.png" alt="">
+                        <h6>Cruise Ship Santa Maria</h6>
+                    </a>
                 </div>
             </div>
         </div>
-        <div id="af3">
-            <p>title text</p><br><br>
-            <div class="af3_box">
-                <a href=""><img src="img/shop_03.png" alt="">
-                    <h6>textrrr</h6>
-                </a>
-            </div>
-            <div class="af3_box">
-                <a href=""><img src="img/shop_05.png" alt="">
-                    <h6>textrrr</h6>
-                </a>
-            </div>
-            <div class="af3_box">
-                <a href=""><img src="img/shop_01.png" alt="">
-                    <h6>textrrr</h6>
-                </a>
-            </div>
-            <div class="af3_box">
-                <a href=""><img src="img/shop_02.png" alt="">
-                    <h6>textrrr</h6>
-                </a>
-            </div>
-            <div class="af3_box">
-                <a href=""><img src="img/shop_06.png" alt="">
-                    <h6>textrrr</h6>
-                </a>
-            </div>
-            <div class="af3_box">
-                <a href=""><img src="" alt="">
-                    <h6>textrrr</h6>
-                </a>
-            </div>
-        </div>
+        <p class="see"><a href="">See More</a></p>
     </div>
-    </div>
-        <p class="see"><a href=""><br><br>See More</a></p>
+
+
 
     <div id="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.672287923735!2d135.42842876916154!3d34.65628555863359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e8f35a4d8563%3A0x1133f4392908c3d9!2zMS1jaMWNbWUtMS0xLTEwIEthaWdhbmTFjXJpLCBNaW5hdG8gV2FyZCwgT3Nha2EsIDU1Mi0wMDIyIOydvOuzuA!5e0!3m2!1sko!2skr!4v1655363037319!5m2!1sko!2skr" width="1200" height="800" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div> 
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3281.9272167414383!2d135.430725!3d34.656541!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e8f353c315d5%3A0xea9d42e547a0998c!2s1-ch%C5%8Dme-1-1%20Kaigand%C5%8Dri%2C%20Minato%20Ward%2C%20Osaka%2C%20552-0022%2C%20Japan!5e0!3m2!1sen!2skr!4v1656480440158!5m2!1sen!2skr"
+            width="1320" height="800" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 
     <footer>
+        <h2>Osaka Aquarium Kaiyukan</h2>
         <br>
-        <h2>textmain ttexttexttexttextte</h2>
-        <br>
-        <h5>textmain ttexttexttexttexttexttexttexttex ttexttexttexttexttexttexttexttextt</h5>
+        <h5></h5>
         <button>Sign Up</button>
         <div id="f_ar">
             <div id="f_menu">
                 <ul>
-                    <li><a href="">ttexttex</a></li>
-                    <li><a href="">ttexttex</a></li>
-                    <li><a href="">ttexttex</a></li>
-                    <li><a href="">ttexttex</a></li>
-                    <li><a href="">ttexttex</a></li>
+                    <li>Visit us</li>
+                    <li><a href="">Opening Hours</a></li>
+                    <li><a href="">Tickets</a></li>
+                    <li>
+                        <ul class="inme">
+                            <li><a href="">Online Tickets</a></li>
+                            <li><a href="">Osaka Kaiyu Ticket</a></li>
+                            <li><a href="">KAIYUKAN Annual Pass</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Access</a></li>
+                    <li><a href="">Information</a></li>
                 </ul>
                 <ul>
-                    <li><a href="">ttexttex</a></li>
-                    <li><a href="">ttexttex</a></li>
-                    <li><a href="">ttexttex</a></li>
-                    <li><a href="">ttexttex</a></li>
-                    <li><a href="">ttexttex</a></li>
+                    <li>Explore Kaiyukan</li>
+                    <li><a href="">About KAIYUKAN</a></li>
+                    <li><a href="">Permanent Exhibit</a></li>
+                    <li><a href="">Interactive Exhibit</a></li>
+                    <li><a href="">Feeding Times for Marine Animals</a></li>
+                    <li><a href="">Theme and Concept of the KAIYUKAN</a></li>
+                    <li><a href="">KAIYUKAN Night Aquarium</a></li>
                 </ul>
                 <ul>
-                    <li><a href="">ttexttex</a></li>
-                    <li><a href="">ttexttex</a></li>
-                    <li><a href="">ttexttex</a></li>
-                    <li><a href="">ttexttex</a></li>
-                    <li><a href="">ttexttex</a></li>
+                    <li>Research and study activities</li>
+                    <li><a href="">Research Activities</a></li>
+                </ul>
+                <ul>
+                    <li>Restaurant & shopping</li>
+                    <li><a href="">Tempozan Harbor Village</a></li>
+                    <li><a href="">Naniwa Kuishinbo Yokocho</a></li>
+                    <li><a href="">Cruise Ship</a></li>
+                    <li><a href="">Giant Ferris Wheel</a></li>
+                    <li><a href="">Captain Line</a></li>
                 </ul>
             </div>
             <div id="sns">
-                Follow Us <br><br>
+                Follow Us <br><br><br>
                 <a href=""><img src="img/sns.png" alt=""></a>
                 <a href=""><img src="img/sns_02.png" alt=""></a>
                 <a href=""><img src="img/sns_facebook.png" alt=""></a>
                 <a href=""><img src="img/sns_kakao.png" alt=""></a>
                 <a href=""><img src="img/sns_line.png" alt=""></a>
-                <a href=""><img src="img/sns_twitter.png" alt=""></a>   
-        </div>
-        <div>
-        <br>    
-        <hr>
-        <br>    
-        <h6>sdkfhsdlkflskjfklasdl;akd;alskdv sdfklfjklsdfjslk kdsjfslkfjlsdkjflk jklfjslkdjflkdjfklsdjflsk
-            fjlkfjlskfjlaskjfl;sk jkhffkklds sdkfjlkjflskjflsakjlk dsjkfslkflkb <br>
-            dskjflkjdflskjfjslkjlksjfslkdfjlskdjflskjflskd</h6>
+                <a href=""><img src="img/sns_twitter.png" alt=""></a>
+            </div>
 
+            </div>
+        </div>
+        <hr>
+        <h6><br><br><br><br>(C) Osaka Aquarium KAIYUKAN. All Rights Reserved.<br><br><br>
+            1-1-10 Kaigandori, Minato-ku, Osaka City 552-0022 Japan<br><br>
+            Tel: +81-6-6576-5501<br>Fax: +81-6-6576-5510<br>
+        </h6>
     </footer>
-    
-    </body>
+    <script src="js/aquarium.js"></script>
+</body>
 </html>
