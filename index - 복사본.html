@@ -86,7 +86,7 @@ document.getElementById("myNav").style.width = "0%";
 
         h3 {
             letter-spacing: 15px;
-            padding: 120px 50px;
+            padding: 120px;
             font-size: 35px;
             color: #163073;
             margin-top: 100px;
@@ -122,25 +122,24 @@ document.getElementById("myNav").style.width = "0%";
 
         #title_box {
             width: 950px;
-            height: 100%;
             display: flex;
+            display: flex;
+            justify-content: center;
             margin-top: -30px;
             box-shadow: 2px 1px 2px rgb(201, 201, 201);
-            background-color: aliceblue;
         }
 
         #title_box1 p {
             font-size: 35px;
-            padding: 10px;
+            padding: 30px;
             letter-spacing: 10px;
         }
 
-        #title_box1 >p:nth-of-type(2) {
+        #title_box1 span {
             font-family: "함초롬바탕 확장";
             font-size: 15px;
             letter-spacing: 3px;
             cursor: pointer;
-            padding: 0 30px 0 0;
         }
 
         #title_box1 {
@@ -149,9 +148,6 @@ document.getElementById("myNav").style.width = "0%";
             background-color: aliceblue;
             color: #163073;
             margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .B_box {
@@ -180,8 +176,8 @@ document.getElementById("myNav").style.width = "0%";
 
         #news {
             background-color: aliceblue;
-            width: 870px;
-            height: 860px;
+            width: 900px;
+            height: 880px;
             padding: 40px;
             display: flex;
             justify-content: center;
@@ -573,7 +569,7 @@ document.getElementById("myNav").style.width = "0%";
 
         #header_top {
             width: 100%;
-            height: 90px;
+            height: 70px;
             background-color: #163073;
             color:
                 aliceblue;
@@ -582,17 +578,15 @@ document.getElementById("myNav").style.width = "0%";
             justify-content: space-between;
         }
 
-        #header_top > h1 {
-            font-family: 'HY울릉도B';
+        #header_top h1 {
             width: 500px;
             margin: 0px;
         }
 
-        #header_top > h1 a span {font-size: 24px; font-family:"HY울릉도S"; opacity: 0.9;}
-
+        header a:hover,
         footer a:hover,
-        header h1:hover, header p:hover , header img:hover {
-            opacity: 0.75;
+        header img:hover {
+            opacity: 0.6;
         }
 
         a {
@@ -609,10 +603,8 @@ document.getElementById("myNav").style.width = "0%";
             align-items: flex-start;
             display: none;
         }
-        .menu {width: 100px; height: 60px; display: flex; 
-            align-items: center; margin:0 5px; }
+        .menu {width: 100px; height: 70px; display: flex; align-items: center; margin:0 10px;  padding:0 15px;}
         .menu span {font-size: 30px;}
-        .menu > img {padding: 5px 0;}
       
 
 
@@ -678,67 +670,11 @@ document.getElementById("myNav").style.width = "0%";
         footer > h6 {font-family:"HY울릉도S";}
 
 
-        @media screen and (max-width: 600px) {
-            
-            #header_top {height: 108px;}
-            #header_top > h1 a span {font-size: 15px; opacity: 0.9;}
-            #header_top > h1 {width: 200px; margin: 0 auto;}
-            
+        @media screen and (max-width: 600px) {}
 
+        @media screen and (min-width: 600px) {}
 
-            #title_box {width: 100%;}
-            
-            #title_box1 {width: 480px; height: 100%; display: flex; 
-                flex-direction: column; align-items: stretch;}
-            #title_box1 > p {text-align: left; margin: 0;}
-            #title_box1 >p:nth-of-type(2) {width: 400px; padding: 0 0 0 10px;}
-
-            .B_box {
-            display: flex;
-            flex-direction: column;
-            align-content: space-around;
-            width: 100px;
-            height: 108px;
-            background-color: #163073;
-            color: aliceblue;
-            cursor: pointer;}
-
-            .B_box img {padding: 0; width: 25px;}
-            .B_box p {margin-bottom: -20px; padding: 0; font-size: 14px;}
-            .B_box h1 {padding: 0; font-size: 27px;}
-
-            #news {width: 500px; height: 1000px ; padding: 25px;}
-            .n_input {padding-top: 950px; display: flex;}
-            .l_n_box {width: 500px;}
-            .n_a img {width: 180px; height: 180px;
-            padding: 10px 0;}
-            #in_img {width: 400px;}
-
-
-            #visit {width: 100%; display: flex; flex-direction: column;}
-            .v_box {width: 360px; height: 170px; padding: 15px; margin:20px auto;}
-            .v_box img {
-            width: 72px;
-            height: 72px;
-            padding: 15px;
-        }
-
-
-
-
-            
-
-
-        }
-
-        @media screen and (min-width: 600px) {
-
-        }
-
-        @media screen and (min-width: 1200px) {
-            
-        }
-
+        @media screen and (min-width: 1200px) {}
     </style>
 
 </head>
@@ -747,28 +683,18 @@ document.getElementById("myNav").style.width = "0%";
 
     <header>
         <div id="header_top">
-            <h1><a href=""><span>Osaka Aquarium</span>  Kaiyukan</a></h1>
+            <h1><a href="">Osaka Aquarium Kaiyukan</a></h1>
 
-
-            <div class="B_box" id="menu">
-                <p>Menu</p><img src="img/icon.wb1.png" alt="icon">
+            <div class="menu">
+                <a href="javascript:void(0)" class="a" onclick="openNav()"><p>Menu</p></a>
+                <img src="img/icon.wb1.png" id="b" onclick="openNav()">
             </div>
-            <div class="B_box" id="x" style="display: none;">
-                <p>close</p>
-                <h1>X</h1>
-            </div>
-
-            
         </div>
 
         <div id="menu_slid" class="overlay">
             <div class="menu">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Close</a>
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><h1>X</h1></a>
-                <div class="B_box" id="close" style="display: none;">
-                    <p>close</p>
-                    <h1>X</h1>
-                </div>
             </div>
             <div id="f_ar">
                 <div id="f_menu">
@@ -817,7 +743,7 @@ document.getElementById("myNav").style.width = "0%";
     <div id="news_box">
         <div id="title_box">
             <div id="title_box1">
-                <p>NEWS</p><p> Osaka Aquarium Kaiyukan will reopen on June 1... more</p>
+                <p>NEWS <span>Osaka Aquarium Kaiyukan will reopen on June 1... more</span></p>
             </div>
             <div class="B_box" id="more">
                 <p>more</p><img src="img/icon.wb1.png" alt="icon">
