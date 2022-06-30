@@ -232,6 +232,9 @@ document.getElementById("myNav").style.width = "0%";
             margin-top: 50px;
         }
 
+
+
+
         .v_box {
             width: 300px;
             height: 300px;
@@ -245,9 +248,8 @@ document.getElementById("myNav").style.width = "0%";
             padding: 50px;
         }
 
-        .v_box p {
+        .v_box > p {
             font-size: 22px;
-            color: aliceblue;
             padding: 15px;
         }
 
@@ -256,6 +258,8 @@ document.getElementById("myNav").style.width = "0%";
             display: flex;
             padding-bottom: 50px;
         }
+
+
 
         #explore { width: 100%; height: 100%;
             position: relative;
@@ -274,6 +278,7 @@ document.getElementById("myNav").style.width = "0%";
             color: aliceblue;
             font-size: 20px;
         }
+        #explore>p>span {font-size: 15px;}
 
         #explore>p:nth-of-type(2) {
             text-align: right;
@@ -709,6 +714,7 @@ document.getElementById("myNav").style.width = "0%";
 
             #news {width: 500px; height: 1000px ; padding: 25px;}
             .n_input {padding-top: 950px; display: flex;}
+            input {padding: 5px;}
             .l_n_box {width: 500px;}
             .n_a img {width: 180px; height: 180px;
             padding: 10px 0;}
@@ -716,12 +722,23 @@ document.getElementById("myNav").style.width = "0%";
 
 
             #visit {width: 100%; display: flex; flex-direction: column;}
-            .v_box {width: 360px; height: 170px; padding: 15px; margin:20px auto;}
+            .v_box {width: 380px; height: 160px; padding: 15px; margin:20px auto;}
             .v_box img {
-            width: 72px;
-            height: 72px;
+            width: 70px;
+            height: 70px;
+            padding: 12px;}
+            .v_box p {
+            font-size: 20px;
+            color: aliceblue;
             padding: 15px;
         }
+
+        
+
+        #slid_r {width: 360px;}
+
+
+        
 
 
 
@@ -945,7 +962,7 @@ document.getElementById("myNav").style.width = "0%";
     <img src="img/20220525_185313.png" id="back">
     <div id="explore">
         <br><br>
-        <p>Aquarium Explore Gallery <br>Lean more about the living creatures in Kaiyukan</p>
+        <p>Aquarium Explore Gallery <br><span>Lean more about the living creatures</span> in Kaiyukan</p>
         <button id="prev"><img src="img/but_le.png" alt="b"></button>
         <div id="slid_r">
             <div id="show">
