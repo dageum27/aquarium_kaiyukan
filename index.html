@@ -86,7 +86,7 @@ document.getElementById("myNav").style.width = "0%";
 
         h3 {
             letter-spacing: 15px;
-            padding: 120px 50px;
+            padding: 120px 0px;
             font-size: 35px;
             color: #163073;
             margin-top: 100px;
@@ -116,10 +116,7 @@ document.getElementById("myNav").style.width = "0%";
             color: aliceblue;
         }
 
-        #news_box {
-            margin: 0;
-        }
-
+      
         #title_box {
             width: 950px;
             height: 100%;
@@ -131,8 +128,10 @@ document.getElementById("myNav").style.width = "0%";
 
         #title_box1 p {
             font-size: 35px;
-            padding: 10px;
+            padding: 5px;
             letter-spacing: 10px;
+            width: 150px;
+            
         }
 
         #title_box1 >p:nth-of-type(2) {
@@ -140,7 +139,9 @@ document.getElementById("myNav").style.width = "0%";
             font-size: 15px;
             letter-spacing: 3px;
             cursor: pointer;
-            padding: 0 30px 0 0;
+            padding: 0 60px 0 0;
+            width: 450px;
+
         }
 
         #title_box1 {
@@ -256,7 +257,7 @@ document.getElementById("myNav").style.width = "0%";
         #visit {
             width: 1200px;
             display: flex;
-            padding-bottom: 50px;
+            
         }
 
 
@@ -687,45 +688,48 @@ document.getElementById("myNav").style.width = "0%";
 
 
         @media screen and (max-width: 600px) {
-            
+            * {text-align: left;}
+
             #header_top {height: 108px;}
             #header_top > h1 a span {font-size: 15px; opacity: 0.9;}
             #header_top > h1 {width: 200px; margin: 0 auto;}
             
 
-
-            #title_box {width: 100%;}
-            
-            #title_box1 {width: 480px; height: 100%; display: flex; 
-                flex-direction: column; align-items: stretch;}
-            #title_box1 > p {text-align: left; margin: 0;}
-            #title_box1 >p:nth-of-type(2) {width: 400px; padding: 0 0 0 10px;}
-
-            .B_box {
+            .B_box { 
             display: flex;
             flex-direction: column;
             align-content: space-around;
-            width: 100px;
+            width: 100px!important;
             height: 108px;
             background-color: #163073;
             color: aliceblue;
             cursor: pointer;}
-
             .B_box img {padding: 0; width: 25px;}
             .B_box p {margin-bottom: -20px; padding: 0; font-size: 14px;}
             .B_box h1 {padding: 0; font-size: 27px;}
 
-            #news {width: 500px; height: 1000px ; padding: 25px;}
-            .n_input {padding-top: 950px; display: flex;}
+
+            
+            #title_box {width: 100%;margin:0 auto;}
+
+            #news {width: 100%; height: 1150px; padding: 0;}
+            
+
+            #title_box > .B_box {position: absolute; right: 0;}
+            #title_box1 {width: px; display: flex; 
+                flex-direction: column; align-items: stretch;}
+            #title_box1 > p {padding: 10px 0 0 15px; width: 300px;text-align: left; margin: 0;}
+            #title_box1 > p:nth-of-type(2) { padding:5px 10px 10px 20px; width: 360px;}
+            .n_input {padding-top: 1100px; display: flex;}
             input {padding: 5px;}
-            .l_n_box {width: 500px;}
+            .l_n_box {width: 390px;}
             .n_a img {width: 180px; height: 180px;
             padding: 10px 0;}
-            #in_img {width: 400px;}
+            #in_img {width: 380px;}
 
 
             #visit {width: 100%; display: flex; flex-direction: column;}
-            .v_box {width: 380px; height: 160px; padding: 15px; margin:20px auto;}
+            .v_box {width: 300px; height: 160px; padding: 15px; margin:20px auto;}
             .v_box img {
             width: 70px;
             height: 70px;
@@ -737,7 +741,7 @@ document.getElementById("myNav").style.width = "0%";
         }
 
         #explore {width: 100%; height: 100%;}
-        #slid_r {width: 360px;}
+        #slid_r {width: 350px;}
 
         #slid img {
             width: 300px;
@@ -758,7 +762,7 @@ document.getElementById("myNav").style.width = "0%";
 
         }
 
-        @media screen and (min-width: 600px) {
+        @media screen and (min-width: 600px) and (max-width:1199px) {
 
         }
 
@@ -792,7 +796,7 @@ document.getElementById("myNav").style.width = "0%";
             <div class="menu">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Close</a>
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><h1>X</h1></a>
-                <div class="B_box" id="close" style="display: none;">
+                <div class="B_box" id="X" style="display: none;">
                     <p>close</p>
                     <h1>X</h1>
                 </div>
@@ -888,7 +892,7 @@ document.getElementById("myNav").style.width = "0%";
                     - Please do not speak loudly.<br>
                     - Please do not touch the acrylic panels of exhibits or tanks.</p>
                 <br><br>
-                <p><a href=""><b>Click here to buy your tickets.</b></p></a><br><br><br>
+                <p><a href=""><b>Click here to buy your tickets.</b></p></a>
             </div>
 
             <div class="l_n_box" id="2" style="display: none;">
