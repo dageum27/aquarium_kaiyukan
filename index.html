@@ -233,6 +233,8 @@ document.getElementById("myNav").style.width = "0%";
             margin-top: 50px;
         }
 
+        #in_img {width: 600px;}
+
 
 
 
@@ -264,7 +266,7 @@ document.getElementById("myNav").style.width = "0%";
 
         #explore { width: 100%; height: 100%;
             position: relative;
-            z-index: 1;
+            z-index: 1; color: aliceblue;
         }
 
         #explore>.see {
@@ -278,23 +280,18 @@ document.getElementById("myNav").style.width = "0%";
         #explore>p:nth-of-type(1) {
             text-align: left;
             padding: 10px 0 0 50px;
-            color: aliceblue;
+           
             font-size: 20px;
         }
         #explore>p>span {font-size: 15px;}
 
         #explore>p:nth-of-type(2) {
-            text-align: right;
-            color: aliceblue;
+            text-align: right; font-size: 25px;
+            
             padding: 10px 50px 5px 0;
         }
 
-        #explore>p:nth-of-type(3) {
-            text-align: right;
-            font-size: 25px;
-            color: aliceblue;
-            padding: 10px 50px 5px 0;
-        }
+
 
         #slid_r a img:hover {
             opacity: 0.8;
@@ -323,14 +320,14 @@ document.getElementById("myNav").style.width = "0%";
             position: absolute;
             z-index: 0;
             width:100%;
-            height: 980px;
+            height: 970px;
             display: block;
         }
 
         #slid_r img {
             width: 90px;
             height: 90px;
-            margin: 15px;
+            padding: 15px;
         }
 
         #slid img {
@@ -347,7 +344,7 @@ document.getElementById("myNav").style.width = "0%";
         #slid_r {
             width: 600px;
             display: flex;
-            margin: 10px 20px 380px 77px;
+            margin: 26px 20px 380px 77px;
             overflow: hidden;
             position: relative;
         }
@@ -710,9 +707,9 @@ document.getElementById("myNav").style.width = "0%";
 
 
             
-            #title_box {width: 100%;margin:0 auto;}
+            #title_box {width: 100% ;margin:0 auto;}
 
-            #news {width: 100%; height: 1150px; padding: 0;}
+            #news {width: 100%; height: 1020px; padding: 0;}
             
 
             #title_box > .B_box {position: absolute; right: 0;}
@@ -720,16 +717,17 @@ document.getElementById("myNav").style.width = "0%";
                 flex-direction: column; align-items: stretch;}
             #title_box1 > p {padding: 10px 0 0 15px; width: 300px;text-align: left; margin: 0;}
             #title_box1 > p:nth-of-type(2) { padding:5px 10px 10px 20px; width: 360px;}
-            .n_input {padding-top: 1100px; display: flex;}
+            .n_input {padding-top: 970px; display: flex;}
             input {padding: 5px;}
-            .l_n_box {width: 390px;}
+            .l_n_box {width: 93%;}
             .n_a img {width: 180px; height: 180px;
             padding: 10px 0;}
-            #in_img {width: 380px;}
+            #in_img {width: 380px; padding: 10px;}
+            .n_img {width: 185px;}
 
 
             #visit {width: 100%; display: flex; flex-direction: column;}
-            .v_box {width: 300px; height: 160px; padding: 15px; margin:20px auto;}
+            .v_box {width: 320px; height: 160px; padding: 15px; margin:20px;}
             .v_box img {
             width: 70px;
             height: 70px;
@@ -741,15 +739,25 @@ document.getElementById("myNav").style.width = "0%";
         }
 
         #explore {width: 100%; height: 100%;}
-        #slid_r {width: 350px;}
+        #explore p {padding: 0 20px 10px 20px!important;}
 
+        #slid_r {width: 330px; margin: 32px 10px 380px 70px;}
+        #slid_r img {padding: 10px;}
+        #prev {
+            left: 10px;
+        }
+   
         #slid img {
             width: 300px;
             height: 300px;
             margin: 11px;
+            
         }
-        #sr {width: 300px; padding: 25px;}
-        #slid {}
+        #sr {width: 300px; padding: 5px; margin: 10px 70px auto;}
+        #slid {width: 2614px; margin: 5px auto;}
+        #next {padding: 0px;
+            right: 15px;
+            bottom: -200px;}
 
 
         
@@ -897,7 +905,7 @@ document.getElementById("myNav").style.width = "0%";
 
             <div class="l_n_box" id="2" style="display: none;">
                 <div class="n_a">
-                    <div style="width: 500px;">
+                    <div style="width: 500px; padding: 10px;">
                         <br><br>
                         <h4>Osaka Aquarium KAIYUKAN voted the<br>
                             Japan's and Asia's Best in TripAdvisor<br>
@@ -924,12 +932,12 @@ document.getElementById("myNav").style.width = "0%";
             <div class="l_n_box" id="3" style="display: none;">
                 <br><br>
                 <h4>Osaka Free Wifi can be used around the Kaiyukan.</h4><br><br><br>
-                <img src="img/innews.jpg" alt="wi" width="600px" height="300px" id="in_img">
+                <img src="img/innews.jpg" alt="wi" id="in_img">
             </div>
 
             <div class="l_n_box" id="4" style="display: none;">
                 <div class="n_a">
-                    <div style="width: 500px;">
+                    <div style="width: 500px; padding: 10px;">
                         <br><br>
                         <h4>We provide the guide map of 29 languages.</h4><br><br>
                         <p>In Kaiyukan, we provide the guide map of 29 languages, as below. <br><br>
@@ -969,13 +977,14 @@ document.getElementById("myNav").style.width = "0%";
         </a>
     </div>
 
+    
     <h3><img src="img/icon_bwl.png" alt="icon">Explore</h3>
     <!-- <video autoplay muted loop id="bVideo">
         <source src="mp4/back_1.mp4" type="video/mp4">
     </video> -->
     <img src="img/20220525_185313.png" id="back">
     <div id="explore">
-        <br><br>
+        <br>
         <p>Aquarium Explore Gallery <br><span>Lean more about the living creatures</span> in Kaiyukan</p>
         <button id="prev"><img src="img/but_le.png" alt="b"></button>
         <div id="slid_r">
@@ -998,9 +1007,10 @@ document.getElementById("myNav").style.width = "0%";
             </div>
 
         </div>
-        <p>Look, listen, and feel</p>
-        <p>New Interactive Exhibit Area</p>
+        <p><span>Look, listen, and feel</span><br>
+        New Interactive Exhibit Area</p>
         <p class="see"><a href="">See More</a></p>
+        
         <div id="sr">
             <div id="slid">
                 <a href=""><img src="img/p16.jpg" alt="1"></a>
