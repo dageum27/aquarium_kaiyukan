@@ -36,7 +36,6 @@ $('#next').click(function () {
 
 
 
-<<<<<<< HEAD
 // $(document).ready(function () {
 //     $("#h_m").click(function () {
 //         $("#menu_fade").slideToggle();
@@ -52,8 +51,6 @@ $(document).ready(function () {
         $("#x").toggle();
     });
 });
-=======
->>>>>>> c58b18e9bb3c97ca38f181bcb0467fcd71ebf1d0
 
 
 
