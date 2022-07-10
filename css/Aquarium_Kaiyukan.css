@@ -445,7 +445,6 @@ h3>img {
     height: 460px;
     display: flex;
     flex-wrap: wrap;
-   
     padding-top: 120px;
 }
 
@@ -741,7 +740,7 @@ footer button {
 
 
 #sns {
-    width: 250px;
+    width: 250px !important;
     height: 100px;
     padding: 30px;
 }
@@ -1209,10 +1208,9 @@ footer>h6 {
     #e2 {
         width: 100%;
         height: 100%;
-        display: flex;
-        flex-wrap: wrap;
-       
     }
+   
+
 
     #researchstudy {
         margin-top: 50px;
@@ -1224,14 +1222,13 @@ footer>h6 {
         flex-direction: column;
     }
 
-    .f_menu {
-        flex-wrap: wrap;
-        width: 100%;
+    #af2 {
+        width: 100%; justify-content: space-around;
     }
 
-    ul,
-    li {
-        width: 220px;
+    .f_menu {
+        width: 100%;
+        flex-wrap: wrap;
     }
 
     .f_ar {
@@ -1246,5 +1243,14 @@ footer>h6 {
 
     #f_ar {
         display: flex;
+    }
+
+    #f_menu {
+        margin: 0;
+    }
+
+    ul,
+    li {
+        width: 200px;
     }
 }
