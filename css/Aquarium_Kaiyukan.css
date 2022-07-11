@@ -223,15 +223,6 @@ h3>img {
     width: 600px;
 }
 
-
-.v_box {
-    box-shadow: 8px 4px 10px 1px rgb(202, 202, 202);
-    width: 300px;
-    height: 300px;
-    background-color: #163073;
-    background-image: radial-gradient(rgb(74, 5, 184), rgb(10, 239, 255));
-}
-
 .v_box img {
     width: 85px;
     height: 85px;
@@ -243,13 +234,18 @@ h3>img {
     padding: 15px;
 }
 
-#visit {
-    width: 1200px;
-    display: flex;
 
+.v_box {
+    box-shadow: 8px 4px 10px 1px rgb(202, 202, 202);
+    width: 300px;
+    height: 300px;
+    background-color: #163073;
+    background-image: radial-gradient(rgb(74, 5, 184), rgb(10, 239, 255));
 }
 
-
+#visit {
+    display: flex;
+}
 
 #explore {
     width: 100%;
@@ -325,7 +321,7 @@ h3>img {
 
 #slid_r a>img {
     box-sizing: content-box;
-    border-radius: 100px;
+    border-radius: 80px;
     /* box-shadow: 1px 1px 12px 1px rgb(202, 202, 202); */
     box-shadow: -1px 5px 13px 6px rgb(2, 14, 77);
 
@@ -346,7 +342,7 @@ h3>img {
 }
 
 #slid_r {
-    width: 600px;
+    
     display: flex;
     margin: 26px 20px 380px 77px;
     overflow: hidden;
@@ -354,32 +350,32 @@ h3>img {
 }
 
 #show {
-    width: 1800px;
     display: flex;
 }
 
 
 
 #sr {
-    width: 960px;
+    
     float: right;
     position: relative;
     overflow: hidden;
-    margin-right: 100px;
-    padding: 20px;
+    margin-right: 130px;
 }
 
 #slid img {
-    width: 200px;
+    width: 220px;
     height: 300px;
     margin: 20px;
-    box-shadow: 1px 1px 15px 1px rgb(202, 202, 202);
+    margin-right: ;
+    
+    box-shadow: 1px 1px 15px 1x rgb(202, 202, 202);
     box-shadow: 4px 4px 15px 4px rgb(5, 20, 85);
 
 }
 
 #slid {
-    width: 1960px;
+    width: 2120px;
     float: right;
     position: relative;
 }
@@ -387,7 +383,7 @@ h3>img {
 #next {
     padding: 40px;
     right: 20px;
-    bottom: -250px;
+    bottom: -240px;
 }
 
 
@@ -406,7 +402,7 @@ h3>img {
 
 #e1 {
     padding-top: 30px;
-    width: 1280px;
+    
     display: flex;
     flex-wrap: nowrap;
 }
@@ -439,7 +435,6 @@ h3>img {
 }
 
 #e2 {
-    width: 1280px;
     height: 460px;
     display: flex;
     flex-wrap: wrap;
@@ -491,11 +486,11 @@ h3>img {
 
 #hide {
     position: absolute;
-    left: 30px;
-    margin-bottom: 390px;
+    left: 100px;
+    margin-bottom: 300px;
     z-index: 4;
     opacity: 0.05;
-    width: 70%;
+    width: 50%;
     height: 60%;
     padding: 50px;
     font-family: "함초롬바탕4 확장";
@@ -506,9 +501,6 @@ h3>img {
     opacity: 1;
 }
 
-/*#hide {
-    opacity: 1;
-} */
 
 
 
@@ -734,8 +726,8 @@ footer button {
 
 #sns {
     width: 250px!important;
-    height: 100px;
-    padding: 30px;
+    height: 120px;
+    padding: 15px;
 }
 
 #sns img {
@@ -974,29 +966,30 @@ footer>h6 {
         left: 10px;
     }
 
+
+
+
     #slid img {
         width: 300px;
         height: 300px;
-        margin: 11px;
-
+        margin: 15px;
     }
 
     #sr {
-        width: 316px;
-        height: 350px;
-        padding: 10px;
-
+        width: 328px;
+        height: 370px;
+        margin: 10px 100px 10px 10px;
+        padding: 0;
     }
 
-    #slid {
-        width: 2614px;
-
+    #slid {margin-top: 15px;
+        width: 2640px;      
     }
 
     #next {
         padding: 10px;
         right: 15px;
-        bottom: -215px;
+        bottom: -230px;
     }
 
 
@@ -1090,10 +1083,12 @@ footer>h6 {
         width: 100%;
         height: 100%;
         flex-direction: column;
+        padding: 7px;
     } 
 
-    ul{margin: 5px auto;}
-    li {width: 330px;}
+    ul,li 
+    {margin: 5px;width: 250px;}
+    
 
 
 
@@ -1113,18 +1108,7 @@ footer>h6 {
         width: 200px;
     }
 
-    .B_box {
-        margin: 0;
-        flex-direction: column;
-        align-content: space-around;
-        width: 120px !important;
-        height: 108px;
-        color: aliceblue;
-        cursor: pointer;
-        position: absolute;
-        right: 0;
-    }
-
+    
     .B_box img {
         padding: 0;
         width: 25px;
@@ -1141,28 +1125,42 @@ footer>h6 {
         font-size: 27px;
     }
 
+
+
     #news_box {
-        width: 100%;
+        width: 85%;
         background-color: aliceblue;
     }
 
     #title_box {
-        width: 85%;
-    }
-
-    #title_box1 {
         width: 100%;
     }
 
-    #news {
-        width: 85%;
-        height: 920px;
-        padding: 0;
+    #title_box1 { width: 85%;
+        
     }
 
-    .l_n_box {
-        width: 80%;
+    .B_box { width: 17%;
+        margin: 0;
+        flex-direction: column;
+        align-content: space-around;
+        width: 140px !important;
+        height: 108px;
+        color: aliceblue;
+        cursor: pointer;
+        /* position: absolute;
+        right: 30px; */    }
+
+
+    #news { 
+        width: 100%;
+        height: 940px;
+        padding: 0;
     }
+    .l_n_box {width: 80%; height: 900px; overflow: hidden;
+        background-color: aliceblue; box-sizing: content-box; }
+    .n_input {margin-top: 50px;}
+    
 
     #title_box1>p:nth-of-type(2) {
         padding: 0px 10px 10px 40px;
@@ -1174,7 +1172,7 @@ footer>h6 {
     }
 
     #sr {
-        width: 720px;
+        width: 530px;
     }
 
     #e1 {
@@ -1220,7 +1218,24 @@ footer>h6 {
 
 @media screen and (min-width: 1200px) {
 
-    .f_ar { width: 100%;
+
+    
+    #visit {
+        width: 1200px;
+    
+    }
+
+    #slid_r {width: 600px;}
+
+    #show {width: 1800px;}
+
+    #sr {width: 1058px;}
+
+    #e1 , #e2 , #around {width: 1280px;}
+
+
+
+    .f_ar { width: 100%; 
         display: flex; 
     }
 

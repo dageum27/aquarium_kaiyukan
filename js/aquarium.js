@@ -23,7 +23,7 @@ function progress() {
 });
 
 $('#next').click(function () {
-    $('#slid').stop().animate({ marginRight: -240 }, 800, function () {
+    $('#slid').stop().animate({ marginRight: -260 }, 800, function () {
         $('#slid a:last').prependTo('#slid');
         $('#slid').css({ marginRight: 0 });
     });
