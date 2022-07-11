@@ -55,6 +55,8 @@ $(document).ready(function () {
 
 
 
+
+
 $(document).ready(function () {
     $("#title_box").click(function () {
         $("#news").slideToggle('fast');
@@ -66,32 +68,32 @@ $(document).ready(function () {
 
 
 $(function () {
-    $("#slide1").click(function () {
-        $("#1").show();
-        $("#2").hide();
-        $("#3").hide();
-        $("#4").hide();
+    $("#show1").click(function () {
+        $("#n1").show();
+        $("#n2").hide();
+        $("#n3").hide();
+        $("#n4").hide();
     });
 
-    $("#slide2").click(function () {
-        $("#2").show();
-        $("#1").hide();
-        $("#3").hide();
-        $("#4").hide();
+    $("#show2").click(function () {
+        $("#n2").show();
+        $("#n1").hide();
+        $("#n3").hide();
+        $("#n4").hide();
     });
 
-    $("#slide3").click(function () {
-        $("#3").show();
-        $("#1").hide();
-        $("#2").hide();
-        $("#4").hide();
+    $("#show3").click(function () {
+        $("#n3").show();
+        $("#n1").hide();
+        $("#n2").hide();
+        $("#n4").hide();
     });
 
-    $("#slide4").click(function () {
-        $("#4").show();
-        $("#1").hide();
-        $("#2").hide();
-        $("#3").hide();
+    $("#show4").click(function () {
+        $("#n4").show();
+        $("#n1").hide();
+        $("#n2").hide();
+        $("#n3").hide();
     });
 });
 
