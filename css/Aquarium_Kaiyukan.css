@@ -925,8 +925,7 @@ footer>h6 {
     }
 
     .v_box img {
-        width: 70px;
-        height: 70px;
+      
         padding: 12px;
     }
 
@@ -971,17 +970,18 @@ footer>h6 {
         width: 300px;
         height: 300px;
         margin: 15px;
+        
     }
 
     #sr {
-        width: 328px;
+        width: 335px;
         height: 370px;
-        margin: 10px 100px 10px 10px;
+        margin: 10px 75px 10px 10px;
         padding: 0;
     }
 
     #slid {margin-top: 15px;
-        width: 2640px;      
+        width: 2680px; height: 360px; 
     }
 
     #next {
