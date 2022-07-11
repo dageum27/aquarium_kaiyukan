@@ -367,8 +367,6 @@ h3>img {
     width: 220px;
     height: 300px;
     margin: 20px;
-    margin-right: ;
-    
     box-shadow: 1px 1px 15px 1x rgb(202, 202, 202);
     box-shadow: 4px 4px 15px 4px rgb(5, 20, 85);
 
@@ -1220,10 +1218,7 @@ footer>h6 {
 
 
     
-    #visit {
-        width: 1200px;
-    
-    }
+    #visit, #e1 , #e2 , #around {width: 1280px;}
 
     #slid_r {width: 600px;}
 
@@ -1231,7 +1226,7 @@ footer>h6 {
 
     #sr {width: 1058px;}
 
-    #e1 , #e2 , #around {width: 1280px;}
+    
 
 
 
