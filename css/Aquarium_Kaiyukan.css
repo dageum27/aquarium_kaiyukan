@@ -69,7 +69,7 @@ h3 {
     padding: 120px 0px;
     font-size: 35px;
     color: #163073;
-    margin-top: 110px;
+    margin-top: 130px;
 }
 
 h3>img {
@@ -126,8 +126,7 @@ h3>img {
     font-size: 14px;
     letter-spacing: 3px;
     cursor: pointer;
-    width: 520px;
-    margin-left: -20px;
+    width: 50%;
     margin-top: 13px;
 }
 
@@ -252,6 +251,7 @@ input [type=radio] {
     display: flex;
 }
 
+
 #explore {
     width: 100%;
     height: 100%;
@@ -260,8 +260,6 @@ input [type=radio] {
     color: aliceblue;
 }
 
-/* #explore>.see {} */
-
 #explore>.see a {
     color: aliceblue;
 }
@@ -269,7 +267,6 @@ input [type=radio] {
 #explore>p:nth-of-type(1) {
     text-align: left;
     padding: 10px 0 0 50px;
-
     font-size: 20px;
 }
 
@@ -282,7 +279,6 @@ input [type=radio] {
     font-size: 25px;
     padding: 10px 50px 5px 0;
 }
-
 
 #slid_r img:hover {
     opacity: 0.9;
@@ -313,7 +309,7 @@ input [type=radio] {
     position: absolute;
     z-index: 0;
     width: 100%;
-    height: 1000px;
+    height: 1200px;
     display: block;
 
 }
@@ -349,7 +345,7 @@ input [type=radio] {
 #slid_r {
 
     display: flex;
-    margin: 26px 20px 380px 77px;
+    margin: 26px 20px 400px 77px;
     overflow: hidden;
     position: relative;
 }
@@ -391,10 +387,10 @@ input [type=radio] {
 
 
 #ex {
-    margin-top: 10px;
+    margin-top: 350px;
     width: 100%;
-    height: 115%;
-    background-image: linear-gradient(#0026d7, #0029b8, rgb(242, 242, 242));
+    height: 125%;
+    background-image: linear-gradient(#0026d7, #0029b8, rgba(242, 242, 242, 0.1));
 }
 
 #e1 img {
@@ -404,8 +400,7 @@ input [type=radio] {
 }
 
 #e1 {
-    padding-top: 30px;
-
+    padding-top: 180px;
     display: flex;
     flex-wrap: nowrap;
 }
@@ -470,38 +465,42 @@ input [type=radio] {
     transform: scale(1.15);
 }
 
+#researchstudy {
+    margin-top: -40px;
+}
+
 
 #research {
-    margin-top: -50px;
-    height: 800px;
+    margin-top: -100px;
+    height: 880px;
     display: flex;
     align-items: flex-end;
 }
 
 #research img {
-    position: relative;
-    z-index: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
 
+    z-index: 0;
+    padding: 0 0 0 12px;
+    width: 80%;
+    height: 85%;
+    position: absolute;
 }
 
 #hide {
-    position: absolute;
-    left: 100px;
-    margin-bottom: 300px;
+    position: relative;
+    margin-bottom: 100px;
     z-index: 4;
     opacity: 0.05;
-    width: 50%;
-    height: 60%;
-    padding: 50px;
+    width: 45%;
+    height: 55%;
+    padding: 40px;
     font-family: "함초롬바탕4 확장";
     font-size: 15px;
 }
 
 #research:hover #hide {
     opacity: 1;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 
@@ -520,9 +519,8 @@ input [type=radio] {
 
 
 #around {
-
     display: flex;
-    padding: 50px;
+    padding: 50px 0;
 }
 
 #around a:hover {
@@ -559,7 +557,7 @@ input [type=radio] {
 }
 
 #af3 {
-    width: 400px;
+    width: 300px;
     display: flex;
     flex-direction: column;
 }
@@ -581,7 +579,7 @@ input [type=radio] {
 }
 
 .af3_box h6 {
-    width: 200px;
+    width: 150px;
     height: 90px;
     text-align: left;
     font-size: 13px;
@@ -792,6 +790,7 @@ footer>h6 {
         text-align: left;
     }
 
+
     h3 {
         width: 100%;
     }
@@ -810,8 +809,8 @@ footer>h6 {
     }
 
     #header_top>h1 {
-        width: 170px;
-        margin: 0 auto;
+        width: 210px;
+
     }
 
     #h_m {
@@ -924,6 +923,10 @@ footer>h6 {
     }
 
     .v_box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         width: 320px;
         height: 160px;
         padding: 15px;
@@ -1034,6 +1037,11 @@ footer>h6 {
         margin-top: -150px;
     }
 
+    #hide {
+        height: 70%;
+        margin-bottom: 100px;
+        left: 80px;
+    }
 
 
 
@@ -1042,7 +1050,7 @@ footer>h6 {
 
     #around {
         padding: 0;
-        width: 100%;
+        width: 90%;
         margin: 5px auto;
         flex-direction: column;
     }
@@ -1051,8 +1059,9 @@ footer>h6 {
         width: 100%;
         height: 1200px;
         flex-direction: column;
-        margin: 5px auto;
+        margin:  80px  0px auto;
     }
+
 
     #af2 {
         width: 100%;
@@ -1061,7 +1070,7 @@ footer>h6 {
 
     #kd {
         width: 90%;
-        height: 30%;
+        height: 25%;
     }
 
 
@@ -1077,13 +1086,25 @@ footer>h6 {
 
 
 
-
-
-
-    #researchstudy>.see,
-    #around_map>.see {
-        margin-top: -30px;
+    #research img {
+        padding: 0;
     }
+
+    #hide {
+        padding: 40px 20px;
+        width: 50%;
+    }
+
+
+    #researchstudy>.see {
+        margin-top: -15px;
+    }
+
+    #around_map>.see {
+        margin-top: -25px;
+    }
+
+
 
     .f_menu {
         width: 100%;
@@ -1104,9 +1125,15 @@ footer>h6 {
 
 }
 
+
+
+
+
+
 @media screen and (min-width: 600px) and (max-width:1199px) {
 
     .ex,
+    #research,
     #visit,
     #around {
         width: 100%;
@@ -1150,9 +1177,6 @@ footer>h6 {
 
     }
 
-    #title_box1>p:nth-of-type(2) {
-        margin-left: -40px;
-    }
 
     .B_box {
         width: 24%;
@@ -1166,9 +1190,8 @@ footer>h6 {
         /* position: absolute;
         right: 30px; */
     }
-    
 
-   
+
     #news {
         width: 100%;
         height: 960px;
@@ -1179,7 +1202,6 @@ footer>h6 {
         width: 80%;
         height: 910px;
         overflow: hidden;
-        
         box-sizing: content-box;
     }
 
@@ -1189,8 +1211,13 @@ footer>h6 {
 
 
     #title_box1>p:nth-of-type(2) {
-        padding: 0px 10px 10px 40px;
-        width: 400px;
+        padding: 0px 20px 10px 0px;
+
+    }
+
+
+    .v_box {
+        width: 30%;
     }
 
     #slid_r {
@@ -1217,26 +1244,35 @@ footer>h6 {
         height: 100%;
     }
 
-
-
-    #researchstudy {
-        margin-top: 50px;
+    #research img {
+        left: 8%;
     }
 
-    #around {
+
+    #around { width: 600px;
         padding: 0;
-        margin: 5px auto;
+        margin: 15px auto;
         flex-direction: column;
+        justify-content: space-between;
     }
 
-    #af2 {
-        width: 100%;
-        justify-content: space-around;
+    #kd {width: 500px; padding: 40px 0 0 0;}
+    #af1 {
+        width: 600px;
     }
+    .af_box {width: 40%;}
+    
+    #af2 {width: 600px;}
+    #af3 { width: 600px; height: 360px;
+        display: flex; flex-flow: column wrap;
+    justify-content: space-between;}
+    
+    .af3_box {width: 250px; }
 
     .f_menu {
         width: 100%;
         flex-wrap: wrap;
+        
     }
 
 }
@@ -1251,7 +1287,7 @@ footer>h6 {
     #e1,
     #e2,
     #around {
-        width: 1280px;
+        width: 1200px;
     }
 
     #slid_r {
@@ -1272,7 +1308,7 @@ footer>h6 {
     }
 
     .n_input {
-        padding-top: 780px; 
+        padding-top: 780px;
     }
 
     .l_n_box {
@@ -1280,7 +1316,20 @@ footer>h6 {
         height: 750px;
     }
 
+    #research {
+        width: 1200px;
+    }
 
+    #research img {
+        width: 960px;
+        height: 780px;
+    }
+
+    #around_map img {
+        padding: 0 10px 50px 10px;
+        width: 70%;
+        height: 70%;
+    }
 
     .f_ar {
         width: 100%;

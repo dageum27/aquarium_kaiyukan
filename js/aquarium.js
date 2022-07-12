@@ -12,26 +12,49 @@ function progress() {
 
  
 
+if (window.matchMedia("(max-width: 600px)").matches) { 
+
+    $('#prev').click(function () {
+        $('#show').stop().animate({ marginLeft: -114 }, 800, function () {
+            $('#show a:first').appendTo('#show');
+            $('#show').css({ marginLeft: 0 });
+        });
+    });
+    
+    $('#next').click(function () {
+        $('#slid').stop().animate({ marginRight: -330 }, 800, function () {
+            $('#slid a:last').prependTo('#slid');
+            $('#slid').css({ marginRight: 0 });
+        });
+    
+       
+    });
+
+} else { 
+
+    $('#prev').click(function () {
+        $('#show').stop().animate({ marginLeft: -120 }, 800, function () {
+            $('#show a:first').appendTo('#show');
+            $('#show').css({ marginLeft: 0 });
+        });
+    });
+    
+    $('#next').click(function () {
+        $('#slid').stop().animate({ marginRight: -260 }, 800, function () {
+            $('#slid a:last').prependTo('#slid');
+            $('#slid').css({ marginRight: 0 });
+        });
+    
+        // $('#slid a:last').prependTo('#slid');
+        // $('#slid').css('margin-left', -120);
+        // $('#slid').stop().animate({ marginLeft: 0 }, 800);
+    });
+
+}
 
  
  
- $('#prev').click(function () {
-    $('#show').stop().animate({ marginLeft: -120 }, 800, function () {
-        $('#show a:first').appendTo('#show');
-        $('#show').css({ marginLeft: 0 });
-    });
-});
-
-$('#next').click(function () {
-    $('#slid').stop().animate({ marginRight: -260 }, 800, function () {
-        $('#slid a:last').prependTo('#slid');
-        $('#slid').css({ marginRight: 0 });
-    });
-
-    // $('#slid a:last').prependTo('#slid');
-    // $('#slid').css('margin-left', -120);
-    // $('#slid').stop().animate({ marginLeft: 0 }, 800);
-});
+ 
 
 
 
