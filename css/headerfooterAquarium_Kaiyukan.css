@@ -1,0 +1,291 @@
+@charset "utf-8";
+
+header,
+footer {
+    width: 100%;
+    height: 100%;
+    font-family: 'HY울릉도B';
+    background-color: #010224;
+    color: aliceblue;
+    text-align: center;
+    box-sizing: border-box;
+
+}
+button {
+    background: none;
+    cursor: pointer;
+}
+header .f_menu {
+    padding: 25px;
+}
+
+footer {
+    padding: 60px;
+}
+
+#header_top {
+    width: 100%;
+    height: 90px;
+    background-color: #010224;
+    color:
+        aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+#header_top>h1 {
+    font-family: 'HY울릉도B';
+    width: 400px;
+    margin: 0px;
+}
+
+#h_m {
+    width: 160px;
+    height: 90px;
+    margin: 0;
+}
+
+#h_m>.B_box {
+    height: 90px;
+}
+
+#header_top>h1 a span {
+    font-size: 24px;
+    font-family: "HY울릉도S";
+    opacity: 0.9;
+}
+
+footer a:hover,
+header h1:hover,
+header p:hover,
+header img:hover,
+header a:hover {
+    opacity: 0.75;
+}
+
+
+/* .menu {
+    width: 100px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.menu span {
+    font-size: 30px;
+}
+
+.menu>img {
+    padding: 5px 0;
+} */
+
+
+
+
+
+/* header button:hover {
+    opacity: 0.5;
+    color: #0F0FA4;
+    background-color: aliceblue;
+} */
+
+footer button:hover {
+    color: #0F0FA4;
+    background-color: aliceblue;
+}
+
+footer button {
+    font-size: 15px;
+    width: 180px;
+    height: 50px;
+    background-color:
+        #0F0FA4;
+    color: aliceblue;
+    padding: 10px;
+    margin: 40px auto;
+}
+
+
+
+.inme {
+    font-family: "HY울릉도S";
+    margin: -15px 10px;
+}
+
+.inme li {
+    font-size: 12.5px !important;
+    padding: 2px;
+}
+
+.f_menu {
+    padding: 20px 0 40px 0px;
+    background-color: #010223;
+    display: flex;
+}
+
+
+.f_menu ul {
+    width: 240px;
+    padding: 10px;
+}
+
+
+#sns {
+    width: 250px !important;
+    height: 120px;
+    padding: 15px;
+}
+
+#sns img {
+    padding: 2px;
+}
+
+footer>h6 {
+    font-family: "HY울릉도S";
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+
+    #header_top {
+        height: 108px;
+    }
+
+    #header_top>h1 a span {
+        font-size: 15px;
+        opacity: 0.9;
+    }
+
+    #header_top>h1 {
+        width: 210px;
+
+    }
+
+    #h_m {
+        width: 100px;
+    }
+
+    .B_box {
+        margin: 0;
+        flex-direction: column;
+        align-content: space-around;
+        width: 100px !important;
+        height: 108px;
+        color: aliceblue;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+    }
+
+
+    .B_box img {
+        padding: 0;
+        width: 25px;
+    }
+
+    .B_box p {
+        margin-bottom: -20px;
+        padding: 0;
+        font-size: 14px;
+    }
+
+    .B_box h1 {
+        padding: 0;
+        font-size: 27px;
+    }
+
+
+.f_menu {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    padding: 7px;
+}
+
+ul,
+li {
+    margin: 1.5px;
+    width: 230px;
+}
+
+
+}
+
+
+
+@media screen and (min-width: 600px) and (max-width:1199px) {
+
+   
+    ul,
+    li {
+        width: 200px;
+    }
+
+
+    .B_box img {
+        padding: 0;
+        width: 25px;
+    }
+
+    .B_box p {
+        margin-bottom: -20px;
+        padding: 0px;
+        font-size: 14px;
+    }
+
+    .B_box h1 {
+        padding: 0;
+        font-size: 27px;
+    }
+
+
+
+   
+
+    .B_box {
+        width: 24%;
+        margin: 0;
+        flex-direction: column;
+        align-content: space-around;
+        width: 140px !important;
+        height: 108px;
+        color: aliceblue;
+        cursor: pointer;
+        /* position: absolute;
+        right: 30px; */
+    }
+
+    .f_menu {
+        width: 100%;
+        flex-wrap: wrap
+    }
+
+}
+
+
+@media screen and (min-width: 1200px) {
+
+
+
+   
+    .f_ar {
+        width: 100%;
+        display: flex;
+    }
+
+    #f_menu {
+        margin: 0;
+    }
+
+    ul,
+    li {
+        width: 180px;
+    }
+}

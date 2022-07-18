@@ -1,0 +1,615 @@
+@charset "utf-8";
+
+
+
+@media screen and (max-width: 600px) {
+
+
+    .see {
+        right: 20px !important;
+    }
+
+
+    h3,
+    #title_box1,
+    .v_box {
+        text-align: left;
+    }
+
+
+    h3 {
+        width: 100%;
+    }
+
+    h3>span {
+        margin-left: 100px;
+    }
+
+    #header_top {
+        height: 108px;
+    }
+
+    #header_top>h1 a span {
+        font-size: 15px;
+        opacity: 0.9;
+    }
+
+    #header_top>h1 {
+        width: 210px;
+
+    }
+
+    #h_m {
+        width: 100px;
+    }
+
+    .B_box {
+        margin: 0;
+        flex-direction: column;
+        align-content: space-around;
+        width: 100px !important;
+        height: 108px;
+        color: aliceblue;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+    }
+
+
+    .B_box img {
+        padding: 0;
+        width: 25px;
+    }
+
+    .B_box p {
+        margin-bottom: -20px;
+        padding: 0;
+        font-size: 14px;
+    }
+
+    .B_box h1 {
+        padding: 0;
+        font-size: 27px;
+    }
+
+
+
+    #title_box {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #news {
+        width: 100%;
+        height: 1020px;
+        padding: 0;
+    }
+
+    #title_box1 {
+        width: px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #title_box1>p {
+        padding: 10px 0 0 15px;
+        width: 300px;
+        text-align: left;
+        margin: 0;
+    }
+
+    #title_box1>p:nth-of-type(2) {
+        padding: 0px 10px 10px 40px;
+        width: 360px;
+    }
+
+    .n_input {
+        transform: translateX(-50%);
+        padding-top: 980px;
+
+    }
+
+
+
+    .l_n_box {
+        width: 93%;
+        height: 970px;
+        overflow: hidden;
+    }
+
+
+    .n_a img {
+        display: inline;
+        width: 180px;
+        height: 180px;
+        padding: 10px 0;
+    }
+
+    #in_img {
+        display: inline;
+        width: 380px;
+        padding: 10px;
+    }
+
+    .n_img {
+        width: 185px;
+    }
+
+    .n_a:nth-of-type(4) {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    #visit {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .v_box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 320px;
+        height: 160px;
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .v_box img {
+
+        padding: 12px;
+    }
+
+    .v_box p {
+        font-size: 20px;
+        color: aliceblue;
+        padding: 15px;
+    }
+
+    #explore {
+        width: 100%;
+        height: 100%;
+    }
+
+    #explore>.see {
+        padding: 30px 20px 100px 0 !important;
+    }
+
+    #explore p {
+        padding: 0 20px 10px 20px !important;
+    }
+
+
+
+    #slid_r {
+        width: 342px;
+        margin: 30px 0px 388px 68px;
+    }
+
+    #slid_r img {
+        margin: 12px;
+    }
+
+    #prev {
+        left: 10px;
+    }
+
+
+
+
+    #slid img {
+        width: 300px;
+        height: 300px;
+        margin: 15px;
+
+    }
+
+    #sr {
+        width: 335px;
+        height: 370px;
+        margin: 10px 75px 10px 10px;
+        padding: 0;
+    }
+
+    #slid {
+        margin-top: 15px;
+        width: 2680px;
+        height: 360px;
+    }
+
+    #next {
+        padding: 10px;
+        right: 15px;
+        bottom: -230px;
+    }
+
+
+    .ex {
+        text-align: center;
+    }
+
+    #e1 {
+        height: 800px;
+        width: 100%;
+
+        flex-direction: column;
+        padding-top: 190px;
+    }
+
+    .e {
+        width: 100%;
+        height: 350px;
+    }
+
+    #e1 img {
+        width: 90%;
+        height: 280px;
+        padding: 0px;
+    }
+
+    .hide {
+        width: 80%;
+        height: 70%;
+        margin-top: -270px;
+    }
+
+    #e2 {
+        width: 100%;
+        height: 100%;
+        margin-top: -150px;
+    }
+
+
+
+    #research {padding: 50px 0;}
+
+    #hide {width: 50%;
+        height: 80%;
+        margin-bottom: 100px;
+        left: 80px;padding: 40px 20px;
+    }
+
+    #research img {
+        padding: 0;
+    }
+    #researchstudy>.see {
+        margin-top: -65px;
+    }
+
+   
+
+    #around {
+        padding: 0;
+        width: 90%;
+        margin: 5px auto;
+        flex-direction: column;
+    }
+
+    #af1 {
+        width: 100%;
+        height: 1200px;
+        flex-direction: column;
+        margin: 80px 0px auto;
+    }
+
+
+    #af2 {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #kd {
+        width: 90%;
+        height: 25%;
+    }
+
+
+    #af2 {
+        width: 100%;
+        flex-direction: column;
+        margin: 5px auto;
+    }
+
+    .af_box .textbox #af3 {
+        width: 100%;
+    }
+
+
+
+
+
+
+    /* #around_map>.see {
+        margin-top: -25px;
+    } */
+
+    #around_map img {
+        width: 100%;
+        padding: 0;
+    }
+
+    .f_menu {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        padding: 7px;
+    }
+
+    ul,
+    li {
+        margin: 1.5px;
+        width: 230px;
+    }
+
+
+
+
+
+}
+
+
+
+
+
+
+@media screen and (min-width: 600px) and (max-width:1199px) {
+
+    .ex,
+    #research,
+    #visit,
+    #around {
+        width: 100%;
+    }
+
+    ul,
+    li {
+        width: 200px;
+    }
+
+
+    .B_box img {
+        padding: 0;
+        width: 25px;
+    }
+
+    .B_box p {
+        margin-bottom: -20px;
+        padding: 0px;
+        font-size: 14px;
+    }
+
+    .B_box h1 {
+        padding: 0;
+        font-size: 27px;
+    }
+
+
+
+    #news_box {
+        width: 85%;
+        background-color: aliceblue;
+    }
+
+    #title_box {
+        width: 100%;
+    }
+
+    #title_box1 {
+        width: 87%;
+
+    }
+
+
+    .B_box {
+        width: 24%;
+        margin: 0;
+        flex-direction: column;
+        align-content: space-around;
+        width: 140px !important;
+        height: 108px;
+        color: aliceblue;
+        cursor: pointer;
+        /* position: absolute;
+        right: 30px; */
+    }
+
+
+    #news {
+        width: 100%;
+        height: 960px;
+        padding: 0;
+    }
+
+    .l_n_box {
+        width: 80%;
+        height: 910px;
+        overflow: hidden;
+        box-sizing: content-box;
+    }
+
+    .n_input {
+        padding-top: 915px;
+    }
+
+
+    #title_box1>p:nth-of-type(2) {
+        padding: 0px 20px 10px 0px;
+
+    }
+
+
+    .v_box {
+        width: 30%;
+    }
+
+    #slid_r {
+        width: 480px;
+    }
+
+    #sr {
+        width: 530px;
+    }
+
+    #e1 {
+        height: 800px;
+        width: 100%;
+        flex-direction: column;
+        padding-top: 100px;
+    }
+
+    #e1 img {
+        padding: 50px 0;
+    }
+
+    #e2 {
+        width: 100%;
+        height: 100%;
+    }
+
+    #research img {
+        left: 8%;
+    }
+
+
+
+
+    #around {
+        min-width: 600px;
+        max-width: 100%;
+        padding: 0;
+        margin: 15px auto;
+        flex-direction: column;
+
+    }
+
+    #kd {
+        width: 70%;
+        height: 37%;
+        padding: 40px 0 0 0;
+    }
+
+    #af1 {
+        width: 90%;
+
+    }
+
+    #af2 {
+        width: 80%;
+        justify-content: space-around;
+        padding: 80px 0;
+    }
+
+    .af_box {
+        width: 50%;
+        overflow: hidden;
+    }
+
+
+    #af3 {
+        width: 80%;
+        height: 360px;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .af3_box {
+        width: 50%;
+        overflow: hidden;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .af3_box h6 {
+        padding: 0px;
+    }
+
+    .af3_box img {
+        margin: 5px;
+    }
+
+    .f_menu {
+        width: 100;
+        flex-wrap: wrap
+    }
+
+}
+
+
+
+@media screen and (min-width: 1200px) {
+
+
+
+    #visit,
+    #e1,
+    #e2,
+    #around {
+        width: 1200px;
+    }
+
+    #slid_r {
+        width: 600px;
+    }
+
+    #show {
+        width: 1800px;
+    }
+
+    #sr {
+        width: 1058px;
+    }
+
+    #news {
+        width: 870px;
+        height: 800px;
+    }
+
+    .n_input {
+        padding-top: 780px;
+    }
+
+    .l_n_box {
+        width: 830px;
+        height: 750px;
+    }
+
+    #research {
+        width: 1000px;
+    }
+
+    #research img {
+        right: 0;
+        width: 900px;
+
+    }
+
+    #hide {
+        height: 35%;
+    }
+
+    #around_map img {
+        padding: 0 10px 50px 10px;
+        width: 70%;
+        height: 70%;
+    }
+
+    .f_ar {
+        width: 100%;
+        display: flex;
+    }
+
+    #f_menu {
+        margin: 0;
+    }
+
+    ul,
+    li {
+        width: 180px;
+    }
+}
