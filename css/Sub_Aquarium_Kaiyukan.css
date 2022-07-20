@@ -1,9 +1,6 @@
 @charset "utf-8";
 
-* {
-    color: aliceblue;
-    font-family: ;
-}
+
 
 
 #open {
@@ -42,31 +39,30 @@
 }
 
 #mv-ca {
-    font-family: 'Bell MT', serif;
-    width: 100%;
+    
+    width: 95%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 40px;
     letter-spacing: 6px;
-    text-shadow: 6px 3px 1px 10px black, 0 0 25px darkblue, 2px 3px 17px 8px rgb(0, 0, 0);
+    
 
 }
 
-#mv-ca span {
-    font-size: 40px;
-    color: black;
+#mv-ca> span {
+    text-shadow: 0px 3px 15px rgb(245, 245, 245);
+    color: rgb(5, 5, 5);
     font-weight: bolder;
-    font-family: 'Bell MT', serif;
-    text-shadow: 15px 10px 15px 1px aliceblue, 6px 3px 1px 10px black, 2px 3px 17px 8px rgb(255, 255, 255);
+    
 }
 
 #open h5 {
-    font-family: 'Bell MT', serif;
-    font-size: 20px;
+    font-family: "함초롬바탕 확장";
+    font-size: 19px;
     letter-spacing: 2px;
-    line-height: 1.2;
+    line-height: 1.4;
     background-color: black;
     font-weight: lighter;
     padding: 50px 0 200px 0;
@@ -80,29 +76,32 @@
 
 
 
-.exhibit { overflow: hidden;
-    background-image: url('../img/sub_back1.png');
-    width: 100%;
-    height: 12000px;
+.exhibit {overflow: hidden; color: aliceblue;  padding: 0 0 200px 0;
+    width: 100%; 
+    height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 100px 0;
 }
+#exh1 {background-image: url('../img/sub_back1.png');}
+#exh2 {background-image: url('../img/sub_back2.png');}
+#exh3 {background-image: url('../img/sub_back3.png'); color: #010224!important;}
+#exh4 {background-image: url('../img/sub_back6.png');}
 
-.exhibit h3 {
+
+.exhibit h3 { text-align: center;
     font-size: 42px;
     color: aliceblue;
-    padding: 10px 0 150px 30px;
+    padding: 10px 0 120px 0;
 }
 
-.exhibit p {
+.exhibit h3 span { text-align: center;
     font-size: 19.5px; overflow: hidden;
     padding: 15px;
     font-family: "HY울릉도S";
 }
 
 .content {
-    height: 900px;
+    
     overflow: hidden;
     width: 100%;
     display: flex;
@@ -111,23 +110,24 @@
 }
 
 .content_1 {
-    height: 900px;
+   
     overflow: hidden;
     width: 100%;
     display: flex;
     align-items: center;
+    padding: 100px 0;
 }
 
 
 
 .conbox {
     width: 300px;
-    padding: 40px;
+    padding: 40px ;
     display: flex;
     flex-flow:
-        column nowrap;
+    column nowrap;
     flex-grow: 2;
-
+    justify-content: center;
 }
 
 .conbox h2 {
@@ -164,18 +164,12 @@
 }
 
 
-
-
-
-
-.conbox_r * {
-    text-align: right;
-}
-
+.conbox_r * {text-align: right;} 
 .conbox_r {
     width: 300px;
-    padding: 0 40px 0 20px;
+    padding: 40px;
     display: flex;
+    justify-content: end;
     flex-flow:
         column nowrap;
     flex-grow: 2;
@@ -190,7 +184,6 @@
 .conbox_r h4 {
     width: 280px;
     margin: 0px;
-
     font-size: 16.5px;
     letter-spacing: 2px;
     font-family: "함초롬바탕 확장";
@@ -201,17 +194,16 @@
 
 
 
-.exhibit button {
-    margin: 0;
+.cont_but {
+    box-shadow: 1px 1px 10px rgb(244, 241, 241);
     font-size: 15px;
-    background: none;
-    border: 2px aliceblue solid;
-    width: 190px;
+    border: 1px aliceblue solid;
+    width: 230px;
     display: flex;
-    padding: 8px 6px 8px 8px;
+    padding: 10px;
     align-items: center;
+    justify-content: space-between;
 }
-
 
 .conbox_img_r,
 .conbox_img_l {
@@ -219,12 +211,16 @@
     flex-grow: 3;
 }
 
+
+
 .conbox_img_r img,
-.conbox_img_l img {
+.conbox_img_l img { filter: drop-shadow(0px 0.5px 7px  aliceblue);
     width: 100%;
     padding: 5px;
 }
 
-.conbox_r button {
-    float: right;
-}
+#wrap {}
+
+.gallery_list img {width: 100px; height: 100px;}
+
+.gallery_list {width: 60%;}

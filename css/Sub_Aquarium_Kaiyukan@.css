@@ -9,23 +9,33 @@
     }
 
 
-    #mv-ca {top: 75%; font-size: 33.3px;
+    #mv-ca {top: 75%; font-size: 30px;
         width: 100%; height: 55%;}
 
 
-    #open h5 {width: 100%; height: 100%; font-size: 20px; padding: 50px 0;}
+    #open h5 {width: 100%; height: 100%; font-size: 20px;}
 
 
+   
 
     .content {display: flex; flex-flow: 
          column-reverse; align-items: center;}
+        
 
          .content_1 {display: flex; flex-flow: 
             column;}
             .conbox {height: 100%;}
+           
+  .conbox_img_r img, .conbox_img_l img { padding: 10px 0; margin: 10px 0;}
 
-  .conbox_img_r img, .conbox_img_l img {width: 100%; padding: 10px 0; margin: 10px 0; margin-left: -30px;}
+  .conbox_img_r {margin-right: -10%;
 
+   
+
+}
+.conbox_img_l {margin-left: -10%;
+   
+   }
 
 
 }
@@ -38,10 +48,10 @@
    
    
 
-    
-    .content {align-items: flex-end; height: 650px;}
+    .content, .content_1 {
+        align-items: flex-end; height: 650px;}
 
-    .conbox {flex-basis:30%; padding: 0 0px 0 10px;}
+    .conbox, .conbox_r { padding: 0 20px;}
 
     .conbox_img_r {margin-right: -22%;}
    
@@ -66,16 +76,12 @@
 
 
 @media screen and (min-width: 1200px) {
-    #mv {padding-top: 65.5%;}
-    #mv-ca {font-size: 51px; top: 53%;}
+    #mv {padding-top: 60%;}
+    #mv-ca {font-size: 51px; top: 57%;}
 
     #open h5 {width: 100%; height: 100%;}
 
-
-.content {
-    width: 100%;
-}
-
+    .content, .content_1 {height: 900px; padding: 100px 0;}
 
 .conbox h4 {
     width: 300px;
